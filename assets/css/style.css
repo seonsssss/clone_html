@@ -1,0 +1,298 @@
+/* 헤더 영역 */
+body {       
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mainHeader {
+    display: flex;
+    background-color: #fff;
+    z-index: 50;
+    width: 100%;  
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    display: inline-block;
+    line-height: 0;
+    padding: 0 20px;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.search-box {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.search-box input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin-left: 16px;
+    background-color: #f9f9f9;
+}
+
+.search-box button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search-button img {
+    width: 24px; /* 버튼 이미지의 너비 */
+    height: 24px; /* 버튼 이미지의 높이 */
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    z-index: 40;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button {
+cursor: pointer;
+}
+
+.btnGrp {
+    display: flex;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+.login button {
+    border-radius: 27px;
+    font-family: 'NanumSquareRound';
+    font-weight: 1000;
+    height: 38px;
+    padding: 0 17px;
+    font-size: 14px;
+    color: white;
+    background: #ffc82a;
+    border: none;
+}
+
+.naver-logo {
+    position: relative;
+    display: inline-block;
+}
+
+.naver-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: white;
+    padding: 10px;
+    font-family: 'NanumSquareRound';
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(3, 199, 90);
+    border: 2px solid #4CAF50;
+    transition: width 0.3s;
+    /* 애니메이션 효과 추가 */
+    text-align: center;
+    /* 텍스트 가운데 정렬 */
+    position: absolute;
+}
+
+.naver-button:hover {
+    width: 100px;
+    /* 가로 길이 확장 */
+    color: rgb(3, 199, 90);
+    /* 텍스트 색상 유지 */
+}
+
+/* 텍스트 변경을 위한 추가 요소 */
+.naver-button::after {
+    content: 'aver';
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.naver-logo button:hover::after {
+    opacity: 1;
+}
+
+.icon {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.icon img:hover {
+    transform: scale(1.2);
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.icon p {
+    margin-top: 12px;
+    font-family: 'NanumSquareRound';
+    font-size: 16px;
+    color: black;
+}
+
+/* 메인 영역 */
+
+.contents {
+  height: 550px;
+}
+  .card {
+    margin: 10px;
+    border-radius: 30px;
+  }
+
+  .cardUp {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cardDown {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card img {
+    width: 144px;
+    height: 178px;
+  }
+  
+  .card1 .card2 .card3 .card4 .card5 .card6 .card7{
+    width: 184px;
+    height: 200px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card1 {
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #9CE8FF;
+  }
+
+  .card2 {
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #FFBEDF;
+  }
+
+  .card3 {
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #FACC00;
+  }
+
+  .card4 {
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #FCE37B;
+  }
+
+  .card5 {
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #EACEF4;
+  }
+
+  .card6 {
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #81DC8B;
+  }
+
+  .card7 {
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #FBD3AB;
+  }
+  
+  .card1:hover {
+    transform: scale(1.1);
+  }
+
+  .card2:hover {
+    transform: scale(1.1);
+  }
+
+  .card3:hover {
+    transform: scale(1.1);
+  }
+
+  .card4:hover {
+    transform: scale(1.1);
+  }
+
+  .card5:hover {
+    transform: scale(1.1);
+  }
+
+  .card6:hover {
+    transform: scale(1.1);
+  }
+
+  .card7:hover {
+    transform: scale(1.1);
+  }
+
+  /* 카드 모달창 영역 */
+  .bigCard{
+
+
+  }
+ 
+  /* 푸터 영역 */
+
+  footer {
+    width : auto;
+    height: 100px;
+    background-color: #ccc;
+  }
