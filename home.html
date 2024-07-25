@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
     <title>쥬니어 네이버</title>
 </head>
 
-<body style="overflow:scroll; height:150px;">
-        <header id = "header">
-            <div class="mainHeader">
+<body style="overflow-x:hidden; overflow-y:scroll; height:150px;">
+    <header id="header">
+        <div class="mainHeader">
             <h1 class="logo">
-                <img src="assets\images\header\logo.png" alt="쥬니버네이버">
+                <a href="home.html" target="_blank">
+                    <img src="assets\images\header\logo.png" alt="쥬니버네이버">
+                </a>
             </h1>
             <div class="search-box">
                 <input type="text" placeholder="검색어를 입력하세요">
@@ -19,7 +22,7 @@
             </div>
             <div class="btnGrp">
                 <div class="login">
-                    <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/" 
+                    <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/"
                         target="_blank"><button>로그인</button></a>
                 </div>
                 <div class="naver-logo">
@@ -30,73 +33,94 @@
         <nav>
             <div class="icons">
                 <div class="icon">
-                    <a href="character.html"><img src="assets\images\header\svg_0.jpeg" alt="캐릭터"></a>
+                    <a href="home.html"><img src="assets\images\header\character.jpeg" alt="캐릭터"></a>
                     <p>캐릭터</p>
                 </div>
                 <div class="icon">
-                    <a href="https://www.naver.com"><img src="assets\images\header\svg_1.jpeg" alt="영상"></a>
+                    <a href="movie.html"><img src="assets\images\header\movie.jpeg" alt="영상"></a>
                     <p>영상</p>
                 </div>
                 <div class="icon">
-                    <a href="https://www.naver.com"><img src="assets\images\header\svg_2.jpeg" alt="게임"></a>
+                    <a href="https://www.naver.com"><img src="assets\images\header\game.jpeg" alt="게임"></a>
                     <p>게임</p>
                 </div>
                 <div class="icon">
-                    <a href="https://www.naver.com"></a><img src="assets\images\header\svg_3.jpeg" alt="즐겨찾기"></a>
+                    <a href="https://www.naver.com"></a><img src="assets\images\header\bookmark.jpeg" alt="즐겨찾기"></a>
                     <p>즐겨찾기</p>
                 </div>
             </div>
         </nav>
-        </header>
-        <main class="contents">
-            <div class = "card">
-                <div class ="cardUp">
-                    <div class="card1">
+    </header>
+    <main class="contents">
+        <div class="card">
+            <div class="cardUp">
+                <div class="card-item" id="card1">
+                    <img src="assets\images\character\뽀치.png" alt="뽀치">
+                </div>
+                <div class="card-item" id="card2">
+                    <img src="assets\images\character\미니.png" alt="미니">
+                </div>
+                <div class="card-item" id="card3">
+                    <img src="assets\images\character\쥬니.png" alt="쥬니">
+                </div>
+                <div class="card-item" id="card4">
+                    <img src="assets\images\character\삐요.png" alt="삐요">
+                </div>
+            </div>
+            <div class="cardDown">
+                <div class="card-item" id="card5">
+                    <img src="assets\images\character\퐁퐁이.png" alt="퐁퐁이">
+                </div>
+                <div class="card-item" id="card6">
+                    <img src="assets\images\character\꼬미.png" alt="꼬미">
+                </div>
+                <div class="card-item" id="card7">
+                    <img src="assets\images\character\포키.png" alt="포키">
+                </div>
+            </div>
+        </div>
+        <div class="modal" style="overflow-x:hidden; overflow-y:hidden;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-card">
+                    <div class="card-item" id="card1">
                         <img src="assets\images\character\뽀치.png" alt="뽀치">
                     </div>
-                    <div class="card2">
-                        <img src="assets\images\character\미니.png" alt="미니">
-                    </div>
-                    <div class="card3">
-                        <img src="assets\images\character\쥬니.png" alt="쥬니">
-                    </div>
-                    <div class="card4">
-                        <img src="assets\images\character\삐요.png" alt="삐요">
-                    </div>
-                </div>
-                <div class ="cardDown">
-                    <div class="card5">
-                        <img src="assets\images\character\퐁퐁이.png" alt="퐁퐁이">
-                    </div>
-                    <div class="card6">
-                        <img src="assets\images\character\꼬미.png" alt="꼬미">
-                    </div>
-                    <div class="card7">
-                        <img src="assets\images\character\포키.png" alt="포키">
+                    <div class="bigCard-item" id="bigCard1">
+                        <p>이름 : 뽀치</br>역할 : 발명가</br>종류: 고슴도치</br>좋아하는 것</br>긍정의 기운 주기</br>
+                            탐구활동</br>발명하기</p>
+                            <img src="assets\images\modal\뽀치bgImg.png" alt="뽀치">
+                                <div class="bigCard-item" id="bigCard1_1">
+                                </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
-            <div class="footer_customer">
-                <a class = "quick_menu1">공지사항</a>
-                <a class = "quick_menu2">이용약관</a>
-                <a class = "quick_menu3">운영원칙</a>
-                <a class = "quick_menu4"><b>개인정보 처리방침</b></a>
-                <a class = "quick_menu5">청소년보호정책</a>
-                <a class = "quick_menu6">고객센터</a>
-                <a class = "quick_menu7">제휴제안</a>
-            </div>
-        </footer>
-        <script>
-            // window.addEventListener('scroll', function() {
-            //     if (window.pageYOffset > 500) {
-            //     document.querySelector('.icons').style.visibility = 'visible';
-            // } else {
-            //     document.querySelector('.icons').style.visibility = 'hidden';
-            // }
-            // });
-            </script>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_customer">
+            <a class="quick_menu1">공지사항</a>
+            <a class="quick_menu2">이용약관</a>
+            <a class="quick_menu3">운영원칙</a>
+            <a class="quick_menu4"><b>개인정보 처리방침</b></a>
+            <a class="quick_menu5">청소년보호정책</a>
+            <a class="quick_menu6">고객센터</a>
+            <a class="quick_menu7">제휴제안</a>
+        </div>
+    </footer>
+    <script>
+        for (let i; i < 7; i++) {
+            $("card"[i+1]).addEventListner("click", function () {
+                console.log("card");
+                if ($("modal"[i+1]).css("display") == "none") {
+                    $("modal"[i+1]).show();
+                } else {
+                    $("modal"[i+1]).hide();
+                }
+            })
+        }
+
+    </script>
 </body>
 
 </html>
