@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Hanna Pro";
+  src: url('../fonts/BMHANNAPro.ttf') format('truetype');
+}
+
 /* 헤더 영역 */
 body {
   margin: 0;
@@ -92,9 +97,7 @@ h1 {
 
 .search-button img {
   width: 24px;
-  /* 버튼 이미지의 너비 */
   height: 24px;
-  /* 버튼 이미지의 높이 */
 }
 
 .icons {
@@ -186,7 +189,7 @@ button {
 }
 
 .icon p {
-  font-family: 'BM HANNA Pro OTF';
+  font-family: 'Hanna Pro';
   font-size: 16px;
   color: black;
   margin: 4px;
@@ -196,9 +199,9 @@ button {
 
 .contents {
   min-height: calc(100vh - 5rem);
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
-  top :160px;
+  top: 160px;
 }
 
 .card {}
@@ -216,7 +219,8 @@ button {
   cursor: pointer;
 }
 
-.card-item {
+.card-item,
+.card-item_1 {
   margin: 25px;
   border-radius: 30px;
   width: 176px;
@@ -227,77 +231,119 @@ button {
   justify-content: center;
 }
 
-#card1, #bigCard1 {
+#card1,
+#bigCard1 {
   background-color: #9CE8FF;
 }
 
-#card2 {
+#close1 {
+  background-color: white;
+  border: 5px solid #9CE8FF;
+  color: #9CE8FF;
+}
+
+/* //#close2 #close3 #close4 #close5 #close6 #close7 */
+#card2,
+#bigCard2 {
   background-color: #FFBEDF;
 }
 
-#card3 {
+#close2 {
+  background-color: white;
+  border: 5px solid #FFBEDF;
+  color: #FFBEDF;
+}
+
+#card3,
+#bigCard3 {
   background-color: #FACC00;
 }
 
-#card4 {
+#close3 {
+  background-color: white;
+  border: 5px solid #FACC00;
+  color: #FACC00;
+}
+
+#card4,
+#bigCard4 {
   background-color: #FCE37B;
 }
 
-#card5 {
+#close4 {
+  background-color: white;
+  border: 5px solid #FCE37B;
+  color: #FCE37B;
+}
+
+#card5,
+#bigCard5 {
   background-color: #EACEF4;
 }
 
-#card6 {
+#close5 {
+  background-color: white;
+  border: 5px solid #EACEF4;
+  color: #EACEF4;
+}
+
+#card6,
+#bigCard6 {
   background-color: #81DC8B;
 }
 
-#card7 {
+#close6 {
+  background-color: white;
+  border: 5px solid #81DC8B;
+  color: #81DC8B;
+}
+
+#card7,
+#bigCard7 {
   background-color: #FBD3AB;
+}
+
+#close7 {
+  background-color: white;
+  border: 5px solid #FBD3AB;
+  color: #FBD3AB;
 }
 
 .card-item:hover {
   transform: scale(1.1);
 }
 
+
+
 /* 카드 모달창 영역 */
 .modal {
   display: none;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  top: 160px;
   left: 0;
   right: 0;
-  top: 160px;
-  bottom: 0;
-  height: 100%;
+  min-height: calc(111vh);
   background-color: #D9D9D9;
   justify-content: center;
-  align-items: flex-start;
-  min-height: calc(125vh - 5rem);
+  align-items: center;
 }
-
-.modal-content {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-} 
 
 .modal-card {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-#bigCard1_1 {
-  background-color: #9CE8FF;
-  opacity: 0.3;
-  position: absolute;
-  
-}
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  flex: 1;
+  width: 36px;
+  height: 36px;
+  font-size: 26px;
+  margin: 25px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
 }
 
 .close:hover,
@@ -312,19 +358,29 @@ button {
   border-radius: 30px;
   width: 388px;
   height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .bigCard-item img {
   width: 386px;
   height: 100px;
-	display: flex;  
-	justify-content: flex-end;
 }
 
 .bigCard-item p {
-  font-family: 'BM HANNA Pro OTF';
+  font-family: 'Hanna Pro';
   font-size: 30px;
   line-height: 1.65em;
+}
+
+#bigCard1_1 {
+  position: relative;
+  z-index: 1;
+}
+
+#bigCard1_1 {
+opacity: 0.5;
 }
 
 /* 푸터 영역 */
@@ -336,87 +392,4 @@ footer {
   top: 30px;
   display: block;
   background-color: #f9eded;
-}
-
-/* movieMain 영역 */
-
-.movieList {
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.movieList img {
-  width: 300px;
-  height: 188px;
-  cursor: pointer;
-  border-radius: 30px;
-  position: relative;
-  justify-content: flex-end;
-}
-
-.movie {
-  position: relative;
-  transition-duration: 1s;
-
-}
-
-.movie:hover {
-  transform: scale(1.1);
-}
-
-.movie-item {
-  margin: 25px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  display: inline-block;
-  position: relative;
-}
-
-.movie-time {
-  position: absolute;
-  bottom: 15px;
-  right: 10px;
-  width: 70px;
-  height: 30px;
-  background-color: #190909;
-  opacity: 0.5;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-}
-
-.movieList p {
-  font-family: '한나체 Pro';
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-  margin: 4px;
-  text-align: left;
-  position: relative;
-}
-
-.text-love {
-  padding: 8px;
-}
-
-.love {
-  position: relative;
-  top: -30px;
-  right: 30px;
-  text-align: right;
-}
-
-.love img {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-}
-
-@font-face {
-  font-family: '한나체 Pro';
-  src: url('project\clone_html\assets\fonts\BMHANNAPro.ttf') format('truetype');
 }

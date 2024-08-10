@@ -1,0 +1,81 @@
+/* movieMain 영역 */
+
+.movieList {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.movieUp, .movieMiddle, .movieEnd{
+    display: flex;
+}
+.movie-item {
+  margin: 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+.movieList img {
+  width: 250px;
+  height: 138px;
+  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.movie {
+  position: relative;
+  transition-duration: 1s;
+
+}
+
+.movie:hover {
+  transform: scale(1.1);
+}
+
+.movie-time {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  width: 70px;
+  height: 30px;
+  background-color: #190909;
+  opacity: 0.5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.movieList p {
+  font-family: 'NanumSquareRound';
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin: 4px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+
+.text-love {
+  padding: 8px;
+}
+
+.love {
+  position: relative;
+  top: -30px;
+  right: 30px;
+  text-align: right;
+}
+
+.love img {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+}
