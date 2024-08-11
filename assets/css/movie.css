@@ -16,7 +16,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* position: relative; */
 }
 .movieList img {
   width: 250px;
