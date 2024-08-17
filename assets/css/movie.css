@@ -29,7 +29,6 @@
 .movie {
   position: relative;
   transition-duration: 1s;
-
 }
 
 .movie:hover {
@@ -77,4 +76,137 @@
   position: absolute;
   width: 36px;
   height: 36px;
+}
+
+/* movie_sub*/
+.movieListSub {
+  display: flex;
+  justify-content: center;
+  position : relative;
+  top:36px;
+}
+.movie-itemSub img {
+  width: 212px;
+  height: 142px;
+  cursor: pointer;
+  border-radius: 30px;
+  justify-content: flex-end;
+  padding: 3px;
+}
+
+.movieListSub p {
+  font-family: 'NanumSquareRound';
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin: 4px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+
+.movietxt p {
+  font-family: 'NanumSquareRound';
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+  margin: 4px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.movie-timeSub{
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
+  width: 60px;
+  height: 20px;
+  background-color: #190909;
+  opacity: 0.5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.bigMovie{
+  padding: 8px;
+  padding-right: 20px;
+}
+
+.bigMovie video{
+  width: 600px;
+  height: 320px;
+}
+
+#movietxtSub{
+  font-size: 24px;
+}
+
+.text-loveSub {
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loveSub {
+  position: relative;
+  top: -10px;
+  right: 70px;
+  text-align: right;
+}
+
+.loveSub img {
+  position: absolute;
+  width: 77px;
+  height: 77px;
+}
+
+.movietxtSub {
+  text-align: left;
+}
+
+.Icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.loveIcon, .playIcon {
+  position: relative;
+  width: 24px;
+  height: 20px;
+  flex: 0 0 24px;
+  margin: 5px;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#IconSub {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#loveIconSub, #playIconSub {
+  width: 12px;
+  flex: 0 0 12px;
+  align-items: center;
+  margin: 2px;
+}
+
+#numberSub {
+  font-size: 10px;
+}
+
+#movieSub:hover {
+  transform: scale(1.02);
 }

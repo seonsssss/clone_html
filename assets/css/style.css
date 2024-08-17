@@ -234,7 +234,8 @@ main {
 }
 
 #card1,
-#bigCard1 {
+#bigCard1,
+#bigCard1_1 {
   background-color: #9CE8FF;
 }
 
@@ -245,7 +246,8 @@ main {
 }
 
 #card2,
-#bigCard2 {
+#bigCard2,
+#bigCard2_1 {
   background-color: #FFBEDF;
 }
 
@@ -256,7 +258,8 @@ main {
 }
 
 #card3,
-#bigCard3 {
+#bigCard3,
+#bigCard3_1 {
   background-color: #FACC00;
 }
 
@@ -267,7 +270,8 @@ main {
 }
 
 #card4,
-#bigCard4 {
+#bigCard4,
+#bigCard4_1 {
   background-color: #FCE37B;
 }
 
@@ -278,7 +282,8 @@ main {
 }
 
 #card5,
-#bigCard5 {
+#bigCard5,
+#bigCard5_1 {
   background-color: #EACEF4;
 }
 
@@ -289,7 +294,8 @@ main {
 }
 
 #card6,
-#bigCard6 {
+#bigCard6,
+#bigCard6_1 {
   background-color: #81DC8B;
 }
 
@@ -300,7 +306,8 @@ main {
 }
 
 #card7,
-#bigCard7 {
+#bigCard7,
+#bigCard7_1 {
   background-color: #FBD3AB;
 }
 
@@ -379,14 +386,6 @@ main {
   z-index: -2;
   opacity: 0.5;
 
-}
-
-#bigCard1_1 {
-  background-color: #7be0ff;
-}
-
-#bigCard2_1 {
-  background-color: #7be0ff;
 }
 
 /* 푸터 영역 */
