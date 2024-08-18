@@ -1,0 +1,110 @@
+main{
+
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.arrow{
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    margin: 8px;
+}
+
+.fa-solid {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 36px;
+    color: #FCE37B;
+}
+.listBoxMain{
+    font-family: 'NanumSquareRound';
+    font-size: 30px;
+    font-weight: bold;
+    margin: 8px;
+    text-align: center;
+}
+
+.listBox {
+    display: flex;
+    font-family: 'NanumSquareRound';
+    font-size: 10px;
+    font-weight: bold;
+    color:white;
+    background-color: #FCE37B;
+    border-radius: 30px;
+    border: 2px solid #D3D3D3;
+    margin: 8px;
+    width: 69px;
+    height: 39px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}  
+
+.gameBoxList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameBoxList p {
+    font-family: 'NanumSquareRound';
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    cursor: pointer;
+}
+
+.gameBoxListUp{
+    display: flex;
+    flex-direction: row;
+}
+
+.gameBoxListDown{
+    display: flex;
+    flex-direction: row;
+}
+
+.text-love {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    position: relative;
+    right: -18px;
+}
+.game img{
+    width: 250px;
+    height: 138px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    justify-content: flex-end;
+    margin: 16px;
+    margin-bottom: 4px;
+    border: 1px solid #D3D3D3;
+}
+
+.love {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    margin: 4px;
+    right: 30px;
+  }
+  
+.love img {
+    position: absolute;
+    margin: 0px;
+    width: 36px;
+    height: 36px;
+    border: 0px;
+}
+
