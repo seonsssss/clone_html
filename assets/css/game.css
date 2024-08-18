@@ -1,14 +1,13 @@
-main{
+main {}
 
-}
-.list{
+.list {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 80px;
 }
 
-.arrow{
+.arrow {
     background-color: white;
     width: 36px;
     height: 36px;
@@ -21,7 +20,8 @@ main{
     font-size: 36px;
     color: #FCE37B;
 }
-.listBoxMain{
+
+.listBoxMain {
     font-family: 'NanumSquareRound';
     font-size: 30px;
     font-weight: bold;
@@ -34,7 +34,7 @@ main{
     font-family: 'NanumSquareRound';
     font-size: 10px;
     font-weight: bold;
-    color:white;
+    color: white;
     background-color: #FCE37B;
     border-radius: 30px;
     border: 2px solid #D3D3D3;
@@ -44,7 +44,7 @@ main{
     text-align: center;
     align-items: center;
     justify-content: center;
-}  
+}
 
 .gameBoxList {
     display: flex;
@@ -61,12 +61,12 @@ main{
     cursor: pointer;
 }
 
-.gameBoxListUp{
+.gameBoxListUp {
     display: flex;
     flex-direction: row;
 }
 
-.gameBoxListDown{
+.gameBoxListDown {
     display: flex;
     flex-direction: row;
 }
@@ -80,7 +80,8 @@ main{
     position: relative;
     right: -18px;
 }
-.game img{
+
+.game img {
     width: 250px;
     height: 138px;
     cursor: pointer;
@@ -98,8 +99,8 @@ main{
     height: 36px;
     margin: 4px;
     right: 30px;
-  }
-  
+}
+
 .love img {
     position: absolute;
     margin: 0px;
@@ -107,4 +108,3 @@ main{
     height: 36px;
     border: 0px;
 }
-

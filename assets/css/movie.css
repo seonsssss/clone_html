@@ -8,15 +8,19 @@
   flex-direction: column;
 }
 
-.movieUp, .movieMiddle, .movieEnd{
-    display: flex;
+.movieUp,
+.movieMiddle,
+.movieEnd {
+  display: flex;
 }
+
 .movie-item {
   margin: 25px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .movieList img {
   width: 250px;
   height: 138px;
@@ -82,9 +86,10 @@
 .movieListSub {
   display: flex;
   justify-content: center;
-  position : relative;
-  top:36px;
+  position: relative;
+  top: 36px;
 }
+
 .movie-itemSub img {
   width: 212px;
   height: 142px;
@@ -116,8 +121,7 @@
   cursor: pointer;
 }
 
-
-.movie-timeSub{
+.movie-timeSub {
   position: absolute;
   bottom: 20px;
   right: 16px;
@@ -132,17 +136,18 @@
   border-radius: 5px;
 }
 
-.bigMovie{
+.bigMovie {
   padding: 8px;
   padding-right: 20px;
 }
 
-.bigMovie video{
+.bigMovie video {
   width: 600px;
   height: 320px;
+  object-fit: fill;
 }
 
-#movietxtSub{
+#movietxtSub {
   font-size: 24px;
 }
 
@@ -150,7 +155,7 @@
   padding: 1px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 .loveSub {
@@ -175,7 +180,8 @@
   flex-direction: row;
 }
 
-.loveIcon, .playIcon {
+.loveIcon,
+.playIcon {
   position: relative;
   width: 24px;
   height: 20px;
@@ -193,10 +199,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
 }
 
-#loveIconSub, #playIconSub {
+#loveIconSub,
+#playIconSub {
   width: 12px;
   flex: 0 0 12px;
   align-items: center;
