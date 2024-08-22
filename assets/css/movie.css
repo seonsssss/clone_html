@@ -2,20 +2,18 @@
 
 .movieList {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-around;
   flex-direction: column;
+  align-items: center;
 }
 
 .movieUp,
 .movieMiddle,
 .movieEnd {
   display: flex;
+  flex-direction: row;
 }
 
 .movie-item {
-  margin: 25px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -25,9 +23,12 @@
   width: 250px;
   height: 138px;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 10px;
   position: relative;
   justify-content: flex-end;
+  margin: 16px;
+  margin-bottom: 4px;
+  border: 1px solid #D3D3D3;
 }
 
 .movie {
@@ -41,10 +42,10 @@
 
 .movie-time {
   position: absolute;
-  bottom: 15px;
-  right: 10px;
-  width: 70px;
-  height: 30px;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 20px;
   background-color: #190909;
   opacity: 0.5;
   color: white;
@@ -66,20 +67,32 @@
 }
 
 .text-love {
-  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  position: relative;
+  right: -18px;
 }
 
 .love {
   position: relative;
-  top: -30px;
+  width: 36px;
+  height: 36px;
+  margin: 4px;
   right: 30px;
-  text-align: right;
+  z-index: 0;
 }
 
 .love img {
   position: absolute;
+  margin: 0px;
   width: 36px;
   height: 36px;
+  border: 0px;
+  z-index: 1;
 }
 
 /* movie_sub*/
@@ -123,7 +136,7 @@
 
 .movie-timeSub {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   right: 16px;
   width: 60px;
   height: 20px;
@@ -142,8 +155,8 @@
 }
 
 .bigMovie video {
-  width: 600px;
-  height: 320px;
+  width: 700px;
+  height: 400px;
   object-fit: fill;
 }
 
@@ -159,10 +172,8 @@
 }
 
 .loveSub {
-  position: relative;
-  top: -10px;
-  right: 70px;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
 }
 
 .loveSub img {
@@ -216,4 +227,12 @@
 
 #movieSub:hover {
   transform: scale(1.02);
+}
+#movieSub img {
+  width: 240px;
+  height: 138px;
+  cursor: pointer;
+  border-radius: 15px;
+  position: relative;
+  justify-content: flex-end;
 }
