@@ -399,4 +399,7 @@ footer {
   top: 30px;
   display: block;
   background-color: #f9eded;
+  text-align: center;
+  line-height : 5rem
 }
+

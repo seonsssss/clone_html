@@ -18,7 +18,7 @@ main {}
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     font-size: 36px;
-    color: #FCE37B;
+    color: #FFE085;
 }
 
 .listBoxMain {
@@ -32,10 +32,10 @@ main {}
 .listBox {
     display: flex;
     font-family: 'NanumSquareRound';
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
-    color: white;
-    background-color: #FCE37B;
+    color: gray;
+    background-color: white;
     border-radius: 30px;
     border: 2px solid #D3D3D3;
     margin: 8px;
@@ -45,6 +45,7 @@ main {}
     align-items: center;
     justify-content: center;
 }
+
 
 .gameBoxList {
     display: flex;
@@ -108,4 +109,83 @@ main {}
     width: 36px;
     height: 36px;
     border: 0px;
+}
+
+/*language*/
+
+.wordImg img {
+    width: 438px;
+    height: 194px;
+    position: relative;
+}
+
+/*quiz*/
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+.quizImg img {
+    width: 454px;
+    height: 148px;
+}
+ 
+.todayQuiz {
+    display:flex;
+    justify-content: center;
+    position: absolute;
+    font-family: 'NanumSquareRound';
+    font-weight: bold; 
+    font-size: 16px;
+    color:white;
+    width : 178px;
+    height: 43px;
+    background-color: #6185E0;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    left: 400px;
+    top:200px;
+}
+
+.todayQuiz {
+    flex: none;
+}
+
+.quizBoxList {
+    display: flex;
+    flex-wrap: wrap;
+}
+.quizBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 590px;
+    height: 159px;
+    border: 1px solid #D3D3D3;
+    border-radius: 30px;
+    margin: 14px;
+}
+
+.quizBox img {
+    width: 138px;
+    height: 119px; 
+    margin: 16px;
+}
+
+.text {
+    text-align: left;
+}
+
+.dino-quiz {
+    font-family: "Hanna Pro";
+    font-size: 50px;
+    font-weight: normal; 
+    margin: 4px;
+}
+
+.dino-explore {
+    font-family: "Hanna Pro";
+    font-size: 20px;
+    color: #666565;
 }

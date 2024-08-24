@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalCards = document.querySelectorAll('.modal-card');
     const modal = document.querySelector('.modal');
     const closeButtons = document.querySelectorAll('.close');
+    const listBox = document.querySelectorAll('.listBox');
 
     cards.forEach((card, index) => {
         card.addEventListener('click', function () {
@@ -25,5 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.target === modal) {
             modal.style.display = 'none';
         }
+    });
+
+    listBox.addEventListener('click', function () {
+        listBox.style.backgrondcolor = "yellow";
+        listBox.style.color = "white";
     });
 });
