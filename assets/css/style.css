@@ -398,8 +398,13 @@ footer {
   bottom: 0px;
   top: 30px;
   display: block;
-  background-color: #f9eded;
+  background-color: #eceff3;
   text-align: center;
-  line-height : 5rem
+  line-height : 5rem;
+}
+
+footer a { 
+  font-family: 'NanumSquareRound';
+
 }
 
