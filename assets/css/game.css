@@ -129,23 +129,23 @@ a {
     width: 454px;
     height: 148px;
 }
- 
+
 .todayQuiz {
-    display:flex;
+    display: flex;
     justify-content: center;
     position: absolute;
     font-family: 'NanumSquareRound';
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 16px;
-    color:white;
-    width : 178px;
+    color: white;
+    width: 178px;
     height: 43px;
     background-color: #6185E0;
     align-items: center;
     text-align: center;
     border-radius: 10px;
     left: 400px;
-    top:200px;
+    top: 200px;
 }
 
 .todayQuiz {
@@ -157,6 +157,7 @@ a {
     flex-wrap: wrap;
     margin-left: 120px;
 }
+
 .quizBox {
     display: flex;
     align-items: center;
@@ -170,7 +171,7 @@ a {
 
 .quizBox img {
     width: 138px;
-    height: 119px; 
+    height: 119px;
     margin: 16px;
 }
 
@@ -181,7 +182,7 @@ a {
 .dino-quiz {
     font-family: "Hanna Pro";
     font-size: 50px;
-    font-weight: normal; 
+    font-weight: normal;
     margin: 4px;
     color: black;
 }

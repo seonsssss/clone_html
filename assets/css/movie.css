@@ -64,6 +64,12 @@
   text-align: left;
   position: relative;
   cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100px;
+  height: 20px;
 }
 
 .text-love {
@@ -95,6 +101,13 @@
   z-index: 1;
 }
 
+.heart-full {
+  z-index: 2;
+}
+
+.heart-empty {
+  z-index: 5;
+}
 /* movie_sub*/
 .movieListSub {
   display: flex;
@@ -226,8 +239,9 @@
 }
 
 #movieSub:hover {
-  transform: scale(1.02);
+  transform: none;
 }
+
 #movieSub img {
   width: 240px;
   height: 138px;
@@ -235,4 +249,9 @@
   border-radius: 15px;
   position: relative;
   justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
