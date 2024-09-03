@@ -102,11 +102,11 @@
 }
 
 .heart-full {
-  z-index: 2;
+  visibility: hidden;
 }
 
 .heart-empty {
-  z-index: 5;
+  visibility: show;
 }
 /* movie_sub*/
 .movieListSub {

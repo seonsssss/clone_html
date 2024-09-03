@@ -346,11 +346,19 @@ main {
   cursor: pointer;
   width: 36px;
   height: 36px;
-  font-size: 26px;
   margin: 25px;
   border-radius: 50%;
   background-color: white;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-content {
+  font-size: 26px;
+  line-height: 1;
+  height: 20px;
 }
 
 .close:hover,
@@ -400,11 +408,10 @@ footer {
   display: block;
   background-color: #eceff3;
   text-align: center;
-  line-height : 5rem;
+  line-height: 5rem;
 }
 
-footer a { 
+footer a {
   font-family: 'NanumSquareRound';
 
 }
-
