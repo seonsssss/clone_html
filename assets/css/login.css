@@ -1,0 +1,90 @@
+.logo {
+    margin: 48px;
+}
+
+.select {
+    margin-top: 5%;
+    margin-left: 70%;
+}
+.login_form_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #077f45;
+}
+
+.floating-label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.input-group input:focus + .floating-label {
+    top: 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.btn.btn-primary {
+    border: 1px solid #03c75b;
+    background-color: #09aa5c;
+    width: 400px;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 13px 0;
+}
+
+
+.easy-login {
+    font-weight: 800;
+}
+
+
+.button-group {
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 155px;
+    height: 30px;
+}
+
+.form-check {
+    padding-top: 20px; 
+    position: relative;
+}
+
+.info {
+    padding-top: 20px; 
+}

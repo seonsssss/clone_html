@@ -353,6 +353,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 .close-content {
