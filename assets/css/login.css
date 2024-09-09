@@ -1,3 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7f7f7; /* 배경색 설정 */
+}
+
 .logo {
     margin: 48px;
 }
@@ -11,7 +22,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: white;
     text-align: center;
 }
 
@@ -35,13 +45,15 @@
 }
 
 .floating-label {
+    display: flex;
     position: absolute;
     left: 10px;
-    top: 50%;
+    top: 20%;
     transition: all .3s cubic-bezier(.4,0,.2,1);
     color: #999;
     pointer-events: none;
     transition: 0.3s ease all;
+    align-items: center;
 }
 
 .input-group input:focus + .floating-label {
@@ -83,8 +95,11 @@
 .form-check {
     padding-top: 20px; 
     position: relative;
+    display: flex;
 }
 
 .info {
     padding-top: 20px; 
+    color: #999;
+    font-size: 14px;
 }
