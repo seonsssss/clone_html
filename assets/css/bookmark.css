@@ -1,0 +1,35 @@
+.bookmarkAll {
+    position: relative;
+    height: 100%;
+    min-height: 250px;
+}
+.bookmark {
+    font-family: 'NanumSquareRound';
+    font-weight: 800;
+    font-size: 23px;
+    letter-spacing: -2px;
+    color: #222;
+}
+
+.loginUse {
+    margin-top: 6px;
+    font-family: 'NanumSquareRound';
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: -0.6px;
+    color: #666;
+}
+
+.favorite--19POh:after {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    width: 890px;
+    height: 250px;
+    margin-left: -445px;
+    background: url(/assets/img/bot-4.png) no-repeat;
+    background-size: 890px 250px;
+    content: '';
+    z-index: 20;
+}

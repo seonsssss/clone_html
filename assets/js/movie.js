@@ -3,27 +3,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const love = document.querySelectorAll(".love");
 
   love.forEach((wrapper) => {
-    const emptyHeart = wrapper.querySelector(".heart-empty");
-    const fullHeart = wrapper.querySelector(".heart-full");
+    const heart = wrapper.querySelector("img");
 
-    emptyHeart.onclick = function () {
-      emptyHeart.style.visibility = "hidden";
-      fullHeart.style.visibility = "visible";
+    heart.onclick = function () {
+        if (heart.classList.contains("heart-empty")) {
+            heart.src = "assets/images/movie/하트.png"; // 채워진 하트 이미지
+            heart.classList.remove("heart-empty");
+            heart.classList.add("heart-full");
+        } else {
+            heart.src = "assets/images/movie/빈하트.png"; // 빈 하트 이미지
+            heart.classList.remove("heart-full");
+            heart.classList.add("heart-empty");
+        }
     };
+    // const emptyHeart = wrapper.querySelector(".heart-empty");
+    // const fullHeart = wrapper.querySelector(".heart-full");
 
-    fullHeart.onclick = function () {
-      fullHeart.style.visibility = "hidden";
-      emptyHeart.style.visibility = "visible";
-    };
+    // emptyHeart.onclick = function () {
+    //   emptyHeart.style.visibility = "hidden";
+    //   fullHeart.style.visibility = "visible";
+    // };
+
+    // fullHeart.onclick = function () {
+    //   fullHeart.style.visibility = "hidden";
+    //   emptyHeart.style.visibility = "visible";
+    // };
   });
 
-  // Handle movie item click and redirection
-  document.querySelectorAll('.movie').forEach(item => {
-    item.addEventListener('click', function () {
-      const movieId = this.getAttribute('data-movie-id');
-      window.location.href = `movie_sub.html?movieId=${movieId}`;
-    });
-  });
 
   // Function to get movie ID from the URL
   function getMovieIdFromURL() {

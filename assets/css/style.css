@@ -5,6 +5,7 @@
 
 /* 헤더 영역 */
 body {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   margin: 0;
