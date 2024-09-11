@@ -27,36 +27,52 @@ body {
 
 .input-group {
     position: relative;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    background: #fff;
+    padding: 27px 15px 8px;
+    border: 1px solid #c5ccd2;
+
+}
+
+#id1 {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#secret{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .input-group input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     border-radius: 4px;
     outline: none;
     transition: border-color 0.3s ease;
 }
 
 .input-group input:focus {
-    border-color: #077f45;
+    outline: none;
 }
 
 .floating-label {
     display: flex;
     position: absolute;
     left: 10px;
-    top: 20%;
+    top: 30%;
     transition: all .3s cubic-bezier(.4,0,.2,1);
     color: #999;
     pointer-events: none;
     transition: 0.3s ease all;
     align-items: center;
+    border: 0px;
+    outline: none;
 }
 
-.input-group input:focus + .floating-label {
+.input-group input:focus + .floating-label  {
     top: 0;
     font-size: 12px;
     color: #999;
