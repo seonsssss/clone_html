@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Handle the love (heart) toggle feature
   const love = document.querySelectorAll(".love");
 
   love.forEach((wrapper) => {
@@ -16,28 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
             heart.classList.add("heart-empty");
         }
     };
-    // const emptyHeart = wrapper.querySelector(".heart-empty");
-    // const fullHeart = wrapper.querySelector(".heart-full");
-
-    // emptyHeart.onclick = function () {
-    //   emptyHeart.style.visibility = "hidden";
-    //   fullHeart.style.visibility = "visible";
-    // };
-
-    // fullHeart.onclick = function () {
-    //   fullHeart.style.visibility = "hidden";
-    //   emptyHeart.style.visibility = "visible";
-    // };
   });
 
-
-  // Function to get movie ID from the URL
   function getMovieIdFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get("movieId");
   }
 
-  // Function to display movie details
   function displayMovieDetails(movieId) {
     const movies = {
       1: {
@@ -102,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // On page load, display movie details if a movie ID is present in the URL
   const movieId = getMovieIdFromURL();
   if (movieId) {
     displayMovieDetails(movieId);

@@ -1,10 +1,18 @@
 body {
     box-sizing: border-box;
+    width: 100%;
 }
-.bookmarkAll {
+
+.bookmarkBefore {
+    display: none;
     margin-top: 100px;
     position: relative;
-    min-height: calc(100vh - 5rem); 
+    min-height: calc(100vh - 15rem);
+}
+
+.bookmarkAfter {
+    display: show;
+    flex-direction: column;
 }
 
 .bookmark {
@@ -24,20 +32,6 @@ body {
     color: #666;
 }
 
-.favorite--19POh:after {
-    position: absolute;
-    display: block;
-    bottom: 0;
-    left: 50%;
-    width: 890px;
-    height: 250px;
-    margin-left: -445px;
-    background: url(/assets/img/bot-4.png) no-repeat;
-    background-size: 890px 250px;
-    content: '';
-    z-index: 20;
-}
-
 .bottomImg img {
     position: absolute;
     display: block;
@@ -49,4 +43,93 @@ body {
     background-size: 890px 250px;
     content: '';
     z-index: 20;
+}
+
+/* Loginafter */
+
+.bookmarkAfter {
+    margin: 41px 30px 0px 30px;
+    height: 220px;
+    background: url(../images/bookmark/dot-line.png) 0 calc(100% - 30px) repeat-x;
+}
+
+.profile {
+    display: flex;
+}
+
+
+.profilephoto {
+    width: 220px;
+    height: 180px;
+    background: url(../images/bookmark/backbg.png) 0 0 no-repeat;
+    background-size: 220px 180px;
+    position: relative;
+    line-height: 200px;
+}
+
+.profilephoto img {
+    width: 106px;
+    height: 106px;
+    border-radius: 50%;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.12);
+    top: 80px;
+    left: 133px;
+    width: 40px;
+    height: 40px;
+}
+
+.userIdNumber {
+    font-family: 'NanumSquareRound';
+    font-size: 50px;
+    line-height: 150px;
+    margin: 0 0 0 30px;
+}
+
+.sketchbook {
+    position: relative;
+    background: url(../images/bookmark/backbg2.png) 0 0 no-repeat;
+    background-size: 220px 180px;
+    background-position: 10px;
+    width: 220px;
+    height: 180px;
+    line-height: 150px;
+    right: -700px;
+}
+
+.sketchbook button {
+    padding: 0 25px;
+    background-color: #0095ff;
+    border-radius: 23.5px;
+    color: white;
+    height: 44px;
+    font-family: NanumSquareRound;
+    font-size: 16px;
+    border: 0px;
+    font-weight: 800;
+    right: 50px;
+}
+
+.textGrp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.recentlyViewed,
+.likeMovie,
+.likePlay {
+    font-family: 'NanumSquareRound';
+    font-size: 26px;
+    letter-spacing: -2px;
+    font-weight: 800;
 }
