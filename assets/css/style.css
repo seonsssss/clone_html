@@ -138,6 +138,17 @@ button {
   border: none;
 }
 
+.logout button {
+  border-radius: 27px;
+  font-family: 'NanumSquareRound';
+  font-weight: 1000;
+  height: 38px;
+  padding: 0 17px;
+  font-size: 14px;
+  color: white;
+  background: #15afce;
+  border: none;
+}
 .naver-logo {
   position: relative;
   display: inline-block;

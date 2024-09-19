@@ -32,5 +32,4 @@ document.addEventListener("DOMContentLoaded", function () {
     listBox.style.backgrondcolor = "yellow";
     listBox.style.color = "white";
   });
-
 });
