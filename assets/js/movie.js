@@ -1,10 +1,12 @@
+import { isLoggedIn, checkLoginStatus } from "./login.js";
 document.addEventListener("DOMContentLoaded", function () {
+  checkLoginStatus();
   const love = document.querySelectorAll(".love");
-
   love.forEach((wrapper) => {
     const heart = wrapper.querySelector("img");
-
     heart.onclick = function () {
+      localStorage.getItem("isLoggedIn");
+      if (isLoggedIn === "true") {
         if (heart.classList.contains("heart-empty")) {
             heart.src = "assets/images/movie/하트.png"; // 채워진 하트 이미지
             heart.classList.remove("heart-empty");
@@ -14,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
             heart.classList.remove("heart-full");
             heart.classList.add("heart-empty");
         }
+      } else {
+        alert("네이버 로그인 하신 후 이용해 주시기 바랍니다.");
+      }
     };
   });
 
