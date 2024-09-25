@@ -55,7 +55,6 @@
 /* Loginafter */
 
 .bookmarkAfter {
-    display: none;
     margin: 41px 30px 0px 30px;
     height: 220px;
     background: url(../images/bookmark/dot-line.png) 0 calc(100% - 30px) repeat-x;

@@ -1,10 +1,12 @@
 const login = document.querySelector(".login");
 const logout = document.querySelector(".logout");
-let isLoggedIn = "false";
+let isLoggedIn = localStorage.getItem("loggedIn");
 
 // 페이지 로드 시 로그인 상태 확인
 window.onload = function () {
   checkLoginStatus();
+  logintoggle();
+  console.log("loggedIn:" + localStorage.getItem("loggedIn")); 
 };
 
 // 로그인 상태 확인 함수
@@ -20,32 +22,18 @@ function checkLoginStatus() {
   }
 }
 
+function logintoggle() {
 login.addEventListener("click", function () {
   localStorage.setItem("loggedIn", "true");
   checkLoginStatus();
+  window.location.reload();
 });
 
 logout.addEventListener("click", function () {
   localStorage.setItem("loggedIn", "false");
   checkLoginStatus();
+  window.location.reload();
 });
+}
 
-
-//   .then((response) => response.text())
-//   .then((data) => {
-//     updateBookmarkVisibility();
-//   });
-
-// function updateBookmarkVisibility() {
-//   const bookmarkBefore = document.querySelector(".bookmarkBefore");
-//   const bookmarkAfter = document.querySelector(".bookmarkAfter");
-
-//   if (isLoggedIn) {
-//     bookmarkBefore.style.display = "none";
-//     bookmarkAfter.style.display = "block";
-//   } else {
-//     bookmarkBefore.style.display = "block";
-//     bookmarkAfter.style.display = "none";
-//   }
-// }
-export { isLoggedIn, checkLoginStatus };
+export { isLoggedIn, checkLoginStatus, logintoggle};

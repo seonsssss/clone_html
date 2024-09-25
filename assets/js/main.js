@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalCards = document.querySelectorAll(".modal-card");
   const modal = document.querySelector(".modal");
   const closeButtons = document.querySelectorAll(".close");
-  const listBox = document.querySelectorAll(".listBox");
+  // const listBox = document.querySelectorAll(".listBox");
 
   cards.forEach((card, index) => {
     card.addEventListener("click", function () {
@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  listBox.addEventListener("click", function () {
-    listBox.style.backgrondcolor = "yellow";
-    listBox.style.color = "white";
-  });
+  // // listBox.addEventListener("click", function () {
+  // //   listBox.style.backgrondcolor = "yellow";
+  // //   listBox.style.color = "white";
+  // });
 });
