@@ -30,6 +30,12 @@
   border: 1px solid #D3D3D3;
 }
 
+#movieList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px; 
+}
+
 .movie {
   position: relative;
   transition-duration: 1s;
