@@ -22,9 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
             title: movieItem.querySelector(".text p").textContent,
             image: movieItem.querySelector(".movie-img").src,
           };
-          let recentlyViewed = JSON.parse(localStorage.getItem("recentlyViewedMovies")) || [];
+          let recentlyViewed =
+            JSON.parse(localStorage.getItem("recentlyViewedMovies")) || [];
           recentlyViewed.push(movieDetails);
-          localStorage.setItem("recentlyViewedMovies", JSON.stringify(recentlyViewed));
+          localStorage.setItem(
+            "recentlyViewedMovies",
+            JSON.stringify(recentlyViewed)
+          );
           console.log("movieDetails" + movieDetails);
           console.log("recentlyViewed" + recentlyViewed);
         } else {
@@ -33,7 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
           heart.classList.add("heart-empty");
         }
       } else {
-        alert("네이버 로그인 하신 후 이용해 주시기 바랍니다.");
+        const ask = confirm("네이버 로그인 하신 후 이용해 주시기 바랍니다.");
+        if (ask) {
+          window.location.href = "login.html";
+        } else {
+          return;
+        }
       }
     }
   });
