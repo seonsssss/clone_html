@@ -3,10 +3,11 @@ const bookmarkBefore = document.querySelector(".bookmarkBefore");
 const bookmarkAfter = document.querySelector(".bookmarkAfter");
 window.onload = function () {
   updateBookmarkVisibility();
-  recentlyViewedPlus();
+  likeMovieDivPlus();
   checkLoginStatus();
   logintoggle();
-  console.log("recentlyViewed:" + localStorage.getItem("recentlyViewedMovies"));
+  // resetLikeMovies();
+  console.log("likeMovieList:" + localStorage.getItem("likeMovieList"));
   console.log("loggedIn:" + localStorage.getItem("loggedIn"));
 };
 
@@ -21,20 +22,37 @@ function updateBookmarkVisibility() {
   }
 }
 
-function recentlyViewedPlus() {
-  const recentlyViewedDiv = document.querySelector(".recentlyViewedMoviesDiv");
-  const recentlyViewed = JSON.parse(localStorage.getItem("recentlyViewedMovies")) || [];
+function likeMovieDivPlus() {
+  const likeMovieDiv = document.querySelector(".likeMovieDiv");
+  const likeMovied =
+    JSON.parse(localStorage.getItem("likeMovieList")) || [];
 
-  recentlyViewed.forEach((movie) => {
-    console.log("recentlyViewed:", movie);
+    likeMovied.forEach((movie) => {
+    console.log("likeMovieList:", movie);
+    const heartImageSrc = movie.isLiked
+      ? "assets/images/movie/하트.png"
+      : "assets/images/movie/빈하트.png";
     const movieHTML = `
-      <div class="recent-movie">
+      <div class="likeMovieList">
+      <a href="movie_sub.html?movieId=${movie.movieId}">
         <img src="${movie.image}" alt="${movie.title}">
-        <p>${movie.title}</p>
+        <div class = "text-love">
+            <div class = "text">
+              <p>${movie.title}</p>
+            </div>
+        <div class="love">
+          <img src="${heartImageSrc}" alt="하트 상태" class="${
+      movie.isLiked ? "heart-full" : "heart-empty"
+    }">
+              </div>
       </div>
     `;
-    recentlyViewedDiv.innerHTML += movieHTML; // Append the movie HTML to the div
+    likeMovieDiv.innerHTML += movieHTML;
   });
+}
 
-  
+
+function resetLikeMovies() {
+  localStorage.removeItem("likeMovieList"); // 로컬 스토리지에서 likeMovies 삭제
+  likeMovieDivPlus(); // 화면에 반영
 }

@@ -1,9 +1,3 @@
-.bookmarkAll {
-    position: relative;
-    height: 100%;
-    min-height: 250px;
-}
-
 .bookmarkBefore {
     display: block;
     margin-top: 50px;
@@ -108,7 +102,7 @@
     width: 220px;
     height: 180px;
     line-height: 150px;
-    right: -700px;
+    left: 600px;
 }
 
 .sketchbook button {
@@ -131,6 +125,13 @@
     margin-top: 30px;
 }
 
+.likeMovieList {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+}
+
 .recentlyViewed,
 .likeMovie,
 .likePlay {
@@ -140,15 +141,15 @@
     font-weight: 800;
 }
 
-
-.recentlyViewedMoviesDiv {
+.likeMovieDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin: 30px;
 }
 
-.recentlyViewedMoviesDiv img {
+.likeMovieDiv img {
     width: 250px;
     height: 138px;
     cursor: pointer;
@@ -158,13 +159,13 @@
     border: 1px solid #D3D3D3;
 }
 
-#recentlyViewedMoviesDiv {
+#likeMovieDiv {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
 }
 
-.recentlyViewedMoviesDiv p {
+.likeMovieDiv p {
     font-family: 'NanumSquareRound';
     font-size: 16px;
     font-weight: bold;
@@ -177,4 +178,32 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100px;
+}
+
+.text-love {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+}
+
+.love {
+    width: 36px;
+    height: 36px;
+    z-index: 0;
+}
+
+.love img {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    cursor: pointer;
+}
+
+footer {
+    display: none;
 }

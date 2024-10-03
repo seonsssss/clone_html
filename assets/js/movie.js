@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   checkLoginStatus();
   logintoggle();
   const movieList = document.getElementById("movieList");
-  let recentlyViewed = localStorage.getItem("recentlyViewed");
+  let likeMovieList = JSON.parse(localStorage.getItem("likeMovieList")) || [];
   movieList.addEventListener("click", function (event) {
     // love 클래스가 포함된 이미지인지 확인
     if (event.target && event.target.closest(".love img")) {
@@ -21,16 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
             movieId: movieId,
             title: movieItem.querySelector(".text p").textContent,
             image: movieItem.querySelector(".movie-img").src,
+            isLiked: heart.classList.contains("heart-full") ? true : false,
           };
-          let recentlyViewed =
-            JSON.parse(localStorage.getItem("recentlyViewedMovies")) || [];
-          recentlyViewed.push(movieDetails);
-          localStorage.setItem(
-            "recentlyViewedMovies",
-            JSON.stringify(recentlyViewed)
-          );
-          console.log("movieDetails" + movieDetails);
-          console.log("recentlyViewed" + recentlyViewed);
+
+          const isMovieAlreadyLiked = likeMovieList.some(movie => movie.movieId === movieId);
+          console.log("isMovieAlreadyLiked:" + isMovieAlreadyLiked);
+          if (isMovieAlreadyLiked) {
+            likeMovieList.push(movieDetails); // 중복이 아닐 경우에만 추가
+            localStorage.setItem("likeMovieList", JSON.stringify(likeMovieList)); // 업데이트된 리스트 저장
+            console.log("movieDetails:", movieDetails);
+            console.log("likeMovieList:", likeMovieList);
+          } else {
+            console.log("This movie is already in the bookmark list.");
+          }
         } else {
           heart.src = "assets/images/movie/빈하트.png"; // 빈 하트 이미지
           heart.classList.remove("heart-full");
@@ -177,11 +180,4 @@ document.addEventListener("DOMContentLoaded", function () {
     displayMovieDetails(movieId);
   }
 
-  // function getRecentlyViewed() {
-  //   return JSON.parse(localStorage.getItem("recentlyViewedMovies")) || [];
-  // }
-
-  // function setRecentlyViewed(recentlyViewed) {
-  //   localStorage.setItem("recentlyViewedMovies", JSON.stringify(recentlyViewed));
-  // }
 });
