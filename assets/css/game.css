@@ -1,17 +1,12 @@
-main {}
+main {
+
+  }
 
 .list {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 80px;
-}
-
-.fa-solid {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    font-size: 36px;
-    color: #FFE085;
 }
 
 .listBoxMain {
@@ -39,12 +34,18 @@ main {}
     justify-content: center;
 }
 
-
-.gameBoxList {
+.gameBox {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.gameBoxList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px; 
+}
+
 
 .gameBoxList p {
     font-family: 'NanumSquareRound';
@@ -55,16 +56,6 @@ main {}
     cursor: pointer;
 }
 
-.gameBoxListUp {
-    display: flex;
-    flex-direction: row;
-}
-
-.gameBoxListDown {
-    display: flex;
-    flex-direction: row;
-}
-
 .text-love {
     display: flex;
     justify-content: space-between;
@@ -72,8 +63,8 @@ main {}
 }
 
 .text {
-    position: relative;
-    right: -18px;
+    display: flex;
+    align-items: center;
 }
 
 .game img {
@@ -83,26 +74,21 @@ main {}
     border-radius: 10px;
     position: relative;
     justify-content: flex-end;
-    margin: 16px;
-    margin-bottom: 4px;
     border: 1px solid #D3D3D3;
 }
 
 .love {
-    position: relative;
     width: 36px;
     height: 36px;
-    margin: 4px;
-    right: 30px;
-}
-
-.love img {
-    position: absolute;
-    margin: 0px;
-    width: 36px;
-    height: 36px;
+    z-index: 0;
+  }
+  
+  .love img {
+    width: 100%;
+    height: 100%;
     border: 0px;
-}
+    cursor: pointer;
+  }
 
 /*language*/
 

@@ -1,0 +1,93 @@
+{
+    "touch": [
+      {
+        "id": "game1",
+        "title": "쥬니버 마트 놀이",
+        "imageSrc": "assets/images/game/touch/쥬니버 마트 놀이.jpg",
+        "altText": "쥬니버 마트 놀이",
+        "link": "https://static-jr.pstatic.net/contents/game/juniverMart/20210429/index.html?web",
+        "heart": {
+          "emptySrc": "assets/images/movie/빈하트.png",
+          "fullSrc": "assets/images/movie/하트.png"
+        }
+      },
+      {
+        "id": "game2",
+        "title": "119구조대 출동!!",
+        "imageSrc": "assets/images/game/touch/119구조대 출동.png",
+        "altText": "119구조대 출동",
+        "link": "https://static-jr.pstatic.net/contents/game/fireScramble/20210429/index.html?web",
+        "heart": {
+          "emptySrc": "assets/images/movie/빈하트.png",
+          "fullSrc": "assets/images/movie/하트.png"
+        }
+      },
+      {
+        "id": "game3",
+        "title": "삐뽀삐뽀 병원놀이",
+        "imageSrc": "assets/images/game/touch/삐뽀삐뽀 병원놀이.jpg",
+        "altText": "삐뽀삐뽀 병원놀이",
+        "link": "https://static-jr.pstatic.net/contents/game/animalHospital/20210429/index.html?web",
+        "heart": {
+          "emptySrc": "assets/images/movie/빈하트.png",
+          "fullSrc": "assets/images/movie/하트.png"
+        }
+      },
+      {
+        "id": "game4",
+        "title": "척척! 혼자서도 잘해요",
+        "imageSrc": "assets/images/game/touch/척척! 혼자서도 잘해요.jpg",
+        "altText": "척척! 혼자서도 잘해요",
+        "link": "https://static-jr.pstatic.net/contents/game/readyToOuting/20210429/index.html?web",
+        "heart": {
+          "emptySrc": "assets/images/movie/빈하트.png",
+          "fullSrc": "assets/images/movie/하트.png"
+        }
+      },
+      {
+        "id": "game5",
+        "title": "동물농장 체험",
+        "imageSrc": "assets/images/game/touch/동물농장 체험.jpg",
+        "altText": "동물농장 체험",
+        "link": "https://static-jr.pstatic.net/contents/game/animalFarm/20210429/index.html?web",
+        "heart": {
+          "emptySrc": "assets/images/movie/빈하트.png",
+          "fullSrc": "assets/images/movie/하트.png"
+        }
+      },
+      {
+        "id": "game6",
+        "title": "도전! 햄버거 요리사",
+        "imageSrc": "assets/images/game/touch/도전! 햄버거 요리사.jpg",
+        "altText": "도전! 햄버거 요리사",
+        "link": "https://static-jr.pstatic.net/contents/game/burgerMaster/20201112/index.html?web",
+        "heart": {
+          "emptySrc": "assets/images/movie/빈하트.png",
+          "fullSrc": "assets/images/movie/하트.png"
+        }
+      },
+      {
+        "id": "game7",
+        "title": "알록달록 색깔 맞추기",
+        "imageSrc": "assets/images/game/touch/알록달록 색깔 맞추기.png",
+        "altText": "알록달록 색깔 맞추기",
+        "link": "https://static-jr.pstatic.net/contents/game/macaron/20210429/index.html?web",
+        "heart": {
+          "emptySrc": "assets/images/movie/빈하트.png",
+          "fullSrc": "assets/images/movie/하트.png"
+        }
+      },
+      {
+        "id": "game8",
+        "title": "우당탕!대청소",
+        "imageSrc": "assets/images/game/touch/우당탕!대청소.jpg",
+        "altText": "우당탕!대청소",
+        "link": "https://static-jr.pstatic.net/contents/game/cleanUp/20210429/index.html?web",
+        "heart": {
+          "emptySrc": "assets/images/movie/빈하트.png",
+          "fullSrc": "assets/images/movie/하트.png"
+        }
+      }
+    ]
+  }
+  
