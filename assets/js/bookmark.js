@@ -32,29 +32,47 @@ function likeMovieDivPlus() {
     const heartImageSrc = movie.isLiked
       ? "assets/images/movie/하트.png"
       : "assets/images/movie/빈하트.png";
-    const movieHTML = `
-      <div class="likeMovieList" id="movie${movie.movieId}">
-        <a href="movie_sub.html?movieId=${movie.movieId}">
-          <img src="${movieDetails.image}" alt="${movieDetails.movietxtSub}">
-                  </a>
-          <div class="text-love">
-            <div class="text">
-              <p>${movieDetails.movietxtSub}</p>
-            </div>
-            <div class="love">
-              <img src="${heartImageSrc}" alt="하트 상태" class="${
-      movie.isLiked ? "heart-full" : "heart-empty"
-    }">
-            </div>
-          </div>
-      </div>
-    `;
 
-    likeMovieDiv.innerHTML += movieHTML;
-
-    const heartImage = likeMovieDiv.querySelector(
-      `#movie${movie.movieId} .love img`
-    );
+    const movieDiv = document.createElement("div");
+    movieDiv.classList.add("likeMovieList");
+    movieDiv.id = `movie${movie.movieId}`;
+  
+    const movieLink = document.createElement("a");
+    movieLink.href = `movie_sub.html?movieId=${movie.movieId}`;
+  
+    const movieImg = document.createElement("img");
+    movieImg.src = movieDetails.image;
+    movieImg.alt = movieDetails.movietxtSub;
+  
+    movieLink.appendChild(movieImg);
+    movieDiv.appendChild(movieLink);
+  
+    const textLoveDiv = document.createElement("div");
+    textLoveDiv.classList.add("text-love");
+  
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("text");
+  
+    const movieText = document.createElement("p");
+    movieText.textContent = movieDetails.movietxtSub;
+  
+    textDiv.appendChild(movieText);
+    textLoveDiv.appendChild(textDiv);
+  
+    const loveDiv = document.createElement("div");
+    loveDiv.classList.add("love");
+  
+    const heartImage = document.createElement("img");
+    heartImage.src = heartImageSrc;
+    heartImage.alt = "하트 상태";
+    heartImage.classList.add(movie.isLiked ? "heart-full" : "heart-empty");
+  
+    loveDiv.appendChild(heartImage);
+    textLoveDiv.appendChild(loveDiv);
+  
+    movieDiv.appendChild(textLoveDiv);
+    likeMovieDiv.appendChild(movieDiv);
+    
     heartImage.addEventListener("click", function () {
       if (movie.isLiked) {
         heartImage.src = "assets/images/movie/빈하트.png"; // 빈 하트 이미지
@@ -68,9 +86,6 @@ function likeMovieDivPlus() {
           JSON.stringify(updatedLikeMovieList)
         ); 
         window.location.reload();
-      } else {
-        // If the heart is empty, do nothing or handle accordingly
-        // You can add code here if needed
       }
     });
   });
