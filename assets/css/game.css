@@ -7,13 +7,6 @@ main {}
     margin-left: 80px;
 }
 
-.arrow {
-    background-color: white;
-    width: 36px;
-    height: 36px;
-    margin: 8px;
-}
-
 .fa-solid {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
