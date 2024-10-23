@@ -34,20 +34,23 @@ main {
     justify-content: center;
 }
 
-.gameBox {
+.gameBox,
+.languageBox {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.gameBoxList {
+.gameBoxList,
+.languageBoxList {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px; 
 }
 
 
-.gameBoxList p {
+.gameBoxList p,
+.languageBoxList p {
     font-family: 'NanumSquareRound';
     font-size: 16px;
     font-weight: bold;
@@ -67,7 +70,8 @@ main {
     align-items: center;
 }
 
-.game img {
+.game img,
+.language img {
     width: 250px;
     height: 138px;
     cursor: pointer;

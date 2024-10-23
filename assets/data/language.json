@@ -1,0 +1,92 @@
+{
+  "languages": [
+    {
+      "id": "language1",
+      "title": "가 (한글)",
+      "imageSrc": "assets/images/game/language/가.jpg",
+      "altText": "가",
+      "link": "https://flash-jr.pstatic.net/jr/playedu/hangeul/index.html?hangeul=ga",
+      "heart": {
+        "emptySrc": "assets/images/movie/빈하트.png",
+        "fullSrc": "assets/images/movie/하트.png"
+      }
+    },
+    {
+      "id": "language2",
+      "title": "a (소문자)",
+      "imageSrc": "assets/images/game/language/a.jpg",
+      "altText": "a",
+      "link": "https://flash-jr.pstatic.net/jr/playedu/alphabet/index.html?alphabet=a",
+      "heart": {
+        "emptySrc": "assets/images/movie/빈하트.png",
+        "fullSrc": "assets/images/movie/하트.png"
+      }
+    },
+    {
+      "id": "language3",
+      "title": "나 (한글)",
+      "imageSrc": "assets/images/game/language/나.jpg",
+      "altText": "나",
+      "link": "https://flash-jr.pstatic.net/jr/playedu/hangeul/index.html?hangeul=na",
+      "heart": {
+        "emptySrc": "assets/images/movie/빈하트.png",
+        "fullSrc": "assets/images/movie/하트.png"
+      }
+    },
+    {
+      "id": "language4",
+      "title": "b (소문자)",
+      "imageSrc": "assets/images/game/language/b.jpg",
+      "altText": "b",
+      "link": "https://flash-jr.pstatic.net/jr/playedu/alphabet/index.html?alphabet=b",
+      "heart": {
+        "emptySrc": "assets/images/movie/빈하트.png",
+        "fullSrc": "assets/images/movie/하트.png"
+      }
+    },
+    {
+      "id": "language5",
+      "title": "다 (한글)",
+      "imageSrc": "assets/images/game/language/다.jpg",
+      "altText": "다",
+      "link": "https://flash-jr.pstatic.net/jr/playedu/hangeul/index.html?hangeul=da",
+      "heart": {
+        "emptySrc": "assets/images/movie/빈하트.png",
+        "fullSrc": "assets/images/movie/하트.png"
+      }
+    },
+    {
+      "id": "language6",
+      "title": "c (소문자)",
+      "imageSrc": "assets/images/game/language/c.jpg",
+      "altText": "c",
+      "link": "https://flash-jr.pstatic.net/jr/playedu/alphabet/index.html?alphabet=c",
+      "heart": {
+        "emptySrc": "assets/images/movie/빈하트.png",
+        "fullSrc": "assets/images/movie/하트.png"
+      }
+    },
+    {
+      "id": "language7",
+      "title": "라 (한글)",
+      "imageSrc": "assets/images/game/language/라.jpg",
+      "altText": "라",
+      "link": "https://flash-jr.pstatic.net/jr/playedu/hangeul/index.html?hangeul=ra",
+      "heart": {
+        "emptySrc": "assets/images/movie/빈하트.png",
+        "fullSrc": "assets/images/movie/하트.png"
+      }
+    },
+    {
+      "id": "language8",
+      "title": "d (소문자)",
+      "imageSrc": "assets/images/game/language/d.jpg",
+      "altText": "d",
+      "link": "https://flash-jr.pstatic.net/jr/playedu/alphabet/index.html?alphabet=d",
+      "heart": {
+        "emptySrc": "assets/images/movie/빈하트.png",
+        "fullSrc": "assets/images/movie/하트.png"
+      }
+    }
+  ]
+}
