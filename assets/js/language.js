@@ -8,7 +8,6 @@ window.onload = function () {
   checkLoginStatus();
   logintoggle();
   renderLanguageBoxList();
-
   languageBox.addEventListener("click", function (event) {
     if (event.target && event.target.closest(".love img")) {
       const heart = event.target;
@@ -43,14 +42,12 @@ window.onload = function () {
             console.log("This language is already in the bookmark list.");
           }
         } else {
-          // Toggle to empty heart
           heart.src = "assets/images/movie/빈하트.png";
           heart.classList.remove("heart-full");
           heart.classList.add("heart-empty");
 
-          // Remove the language from the liked list
           likeLanguageList = likeLanguageList.filter((lang) => lang.languageId !== languageId);
-          localStorage.setItem("likeLanguageList", JSON.stringify(likeLanguageList)); // Update localStorage
+          localStorage.setItem("likeLanguageList", JSON.stringify(likeLanguageList));
           console.log("Language removed from likeLanguageList:", languageId);
         }
       } else {

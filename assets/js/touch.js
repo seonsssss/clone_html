@@ -3,7 +3,6 @@ let isGameAlreadyLiked;
 let likeGameList = JSON.parse(localStorage.getItem("likeGameList")) || [];
 const gameBoxList = document.querySelector(".gameBoxList");
 const gameBox = document.querySelector(".gameBox");
-
 window.onload = function () {  
   checkLoginStatus();
   logintoggle();
