@@ -20,35 +20,31 @@
     </div>
 
     <div class="logo">
-        <img src="assets\images\login\NAVER Logo.png">
+        <img src="assets/images/login/NAVER Logo.png" alt="NAVER Logo">
     </div>
-    <div class=login_form_wrap>
-        <form>
-            <div class="input-group" id = "id">
+    <div class="login_form_wrap">
+        <form id="loginForm">
+            <div class="input-group" id="id">
                 <input type="text" id="userId" required>
                 <label for="userId" class="floating-label">아이디 또는 전화번호</label>
             </div>
-            <div class="input-group" id = "secret">
+            <div class="input-group" id="secret">
                 <input type="password" id="userPassword" required>
                 <label for="userPassword" class="floating-label">비밀번호</label>
             </div>
             <div class="login-button">
-                <div button type="login" class="btn btn-primary">로그인</button>
-                </div>
+                <button type="submit" class="btn btn-primary">로그인</button>
             </div>
             <div class="form-check">
-                <div>
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">로그인 상태 유지</label>
-                </div>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">로그인 상태 유지</label>
             </div>
         </form>
+        <p id="message"></p>
         <div class="info">
             아이디 찾기 | 비밀번호 찾기 | 회원가입
         </div>
     </div>
-    <script>
-        localStorage.setItem("loggedIn", "true");
-    </script>
+    <script src="assets/js/login.js" type="module"></script>
 </body>
 </html>
