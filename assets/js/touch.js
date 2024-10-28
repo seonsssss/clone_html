@@ -7,13 +7,14 @@ window.onload = function () {
   checkLoginStatus();
   logintoggle();
   renderGameBoxList();
+
   gameBox.addEventListener("click", function (event) {
-    // love 클래스가 포함된 이미지인지 확인
     if (event.target && event.target.closest(".love img")) {
       const heart = event.target;
       const game = heart.closest(".game");
       const gameLink = game.querySelector("a").href;
       const gameId = game.id.replace("game", "");
+      
       const gameDetails = {
         gameId: gameId,
         title: game.querySelector(".text p").textContent,
@@ -120,10 +121,16 @@ function restoreGameLikedStatus() {
     );
     if (likedGameItem) {
       const heart = likedGameItem.querySelector(".love img");
-      if (heart) {
-        heart.src = "assets/images/movie/하트.png"; // Change to filled heart
-        heart.classList.remove("heart-empty");
-        heart.classList.add("heart-full");
+    if (heart) {
+        if (isLoggedIn === "true") {
+          heart.src = "assets/images/movie/하트.png";
+          heart.classList.remove("heart-empty");
+          heart.classList.add("heart-full");
+        } else {
+          heart.src = "assets/images/movie/빈하트.png";
+          heart.classList.remove("heart-full");
+          heart.classList.add("heart-empty");
+        }
       }
     }
   });

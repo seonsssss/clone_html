@@ -8,6 +8,7 @@ window.onload = function () {
   checkLoginStatus();
   logintoggle();
   renderLanguageBoxList();
+
   languageBox.addEventListener("click", function (event) {
     if (event.target && event.target.closest(".love img")) {
       const heart = event.target;
@@ -23,19 +24,18 @@ window.onload = function () {
         isLiked: true,
       };
 
-      // Check if the language is already liked
       isLanguageAlreadyLiked = likeLanguageList.some((lang) => lang.languageId === languageId);
 
+      console.log("isLoggedIn:", isLoggedIn);
       if (isLoggedIn === "true") {
         if (heart.classList.contains("heart-empty")) {
-          // Toggle to filled heart
           heart.src = "assets/images/movie/하트.png";
           heart.classList.remove("heart-empty");
           heart.classList.add("heart-full");
 
           if (!isLanguageAlreadyLiked) {
-            likeLanguageList.push(languageDetails); // Add to liked list if not already liked
-            localStorage.setItem("likeLanguageList", JSON.stringify(likeLanguageList)); // Save updated list
+            likeLanguageList.push(languageDetails);
+            localStorage.setItem("likeLanguageList", JSON.stringify(likeLanguageList));
             console.log("languageDetails:", languageDetails);
             console.log("likeLanguageList:", likeLanguageList);
           } else {
@@ -71,7 +71,7 @@ function renderLanguageBoxList() {
       languages.forEach((language) => {
         const languageDiv = document.createElement("div");
         languageDiv.classList.add("language");
-        languageDiv.id = `language${language.id}`; // Correct id prefix
+        languageDiv.id = `language${language.id}`;
 
         const languageLink = document.createElement("a");
         languageLink.href = language.link;
@@ -111,7 +111,7 @@ function renderLanguageBoxList() {
         languageBoxList.appendChild(languageDiv);
       });
       
-      restoreLanguageLikedStatus(); // After rendering, restore the liked status
+      restoreLanguageLikedStatus(); 
     })
     .catch((error) => console.error("Error fetching languages data:", error));
 }
@@ -122,10 +122,15 @@ function restoreLanguageLikedStatus() {
     if (likedLanguageItem) {
       const heart = likedLanguageItem.querySelector(".love img");
       if (heart) {
-        // Restore the filled heart for liked languages
-        heart.src = "assets/images/movie/하트.png";
-        heart.classList.remove("heart-empty");
-        heart.classList.add("heart-full");
+        if (isLoggedIn === "true") {
+          heart.src = "assets/images/movie/하트.png";
+          heart.classList.remove("heart-empty");
+          heart.classList.add("heart-full");
+        } else {
+          heart.src = "assets/images/movie/빈하트.png";
+          heart.classList.remove("heart-full");
+          heart.classList.add("heart-empty");
+        }
       }
     }
   });

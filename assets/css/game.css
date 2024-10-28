@@ -108,15 +108,27 @@ a {
     color: gray;
 }
 
+
+.quizImg {
+    position: relative;
+    max-width: 894px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .quizImg img {
-    width: 454px;
-    height: 148px;
+    width: 336px;
+    height: 106px;
 }
 
 .todayQuiz {
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    transform: translateX(-50%); 
     display: flex;
     justify-content: center;
-    position: absolute;
+    align-items: center;
     font-family: 'NanumSquareRound';
     font-weight: bold;
     font-size: 16px;
@@ -124,29 +136,25 @@ a {
     width: 178px;
     height: 43px;
     background-color: #6185E0;
-    align-items: center;
     text-align: center;
     border-radius: 10px;
-    left: 400px;
-    top: 200px;
-}
-
-.todayQuiz {
-    flex: none;
 }
 
 .quizBoxList {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 120px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin-left: 0 auto;
+    padding: 20px;
 }
 
 .quizBox {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    width: 576x;
-    height: 184px;
+    width: 476px;
+    height: 200px; 
     border: 1px solid #D3D3D3;
     border-radius: 30px;
     margin: 14px;
@@ -155,23 +163,31 @@ a {
 .quizBox img {
     width: 138px;
     height: 119px;
-    margin: 16px;
+    margin: 36px;
 }
 
 .text {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    height: 100%; 
+    margin-left: 30px;
 }
 
 .dino-quiz {
-    font-family: "Hanna Pro";
-    font-size: 50px;
-    font-weight: normal;
-    margin: 4px;
+    font-family: 'NanumSquareRound';
+    font-size: 24px;
+    font-weight: 800;
+    margin: 4px 0;
     color: black;
+    line-height: 1.2; 
 }
 
 .dino-explore {
-    font-family: "Hanna Pro";
-    font-size: 20px;
+    font-family: 'NanumSquareRound';
+    font-size: 13px;
     color: #666565;
+    margin: 4px 0;
+    line-height: 1.2; 
 }
