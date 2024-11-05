@@ -106,21 +106,20 @@ function populateLikeDiv() {
         : "assets/images/movie/빈하트.png";
       heartImage.classList.toggle("heart-full");
       heartImage.classList.toggle("heart-empty");
-
+    
       if (!item.isLiked) {
-        const updatedList = combinedList.filter(i => {
-          return !(i.type === item.type && i.id === item.id);
-        });
-    
-        // 각 리스트에 대해 개별적으로 업데이트
+        let updatedList;
+        
         if (item.type === "movie") {
-          localStorage.setItem("likeMovieList", JSON.stringify(updatedList.filter(i => i.type === 'movie')));
+          updatedList = likeMovied.filter(i => i.movieId !== item.movieId);
+          localStorage.setItem("likeMovieList", JSON.stringify(updatedList));
         } else if (item.type === "game") {
-          localStorage.setItem("likeGameList", JSON.stringify(updatedList.filter(i => i.type === 'game')));
+          updatedList = likeGamed.filter(i => i.gameId !== item.gameId);
+          localStorage.setItem("likeGameList", JSON.stringify(updatedList));
         } else if (item.type === "language") {
-          localStorage.setItem("likeLanguageList", JSON.stringify(updatedList.filter(i => i.type === 'language')));
+          updatedList = likeLanguage.filter(i => i.languageId !== item.languageId); 
+          localStorage.setItem("likeLanguageList", JSON.stringify(updatedList));
         }
-    
         itemDiv.remove(); 
       }
     });
