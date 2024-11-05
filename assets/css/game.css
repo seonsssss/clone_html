@@ -103,6 +103,15 @@ main {
 }
 
 /*quiz*/
+/* @media screen and (min-width: 900px) {
+    .quizBoxList {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 50%;
+    }
+  } */
+  
 a {
     text-decoration: none;
     color: gray;
@@ -142,28 +151,35 @@ a {
 
 .quizBoxList {
     display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    max-width: 1200px;
-    margin-left: 0 auto;
+    justify-content: center; 
+    gap: 20px; 
     padding: 20px;
 }
 
-.quizBox {
+.quizColumn {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 476px;
-    height: 200px; 
-    border: 1px solid #D3D3D3;
-    border-radius: 30px;
-    margin: 14px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quizBox {
+    position: relative;
+    width: 536px;
+    height: 156px; 
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: left;
+    border: solid 2px #f1f4f7;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
 }
 
 .quizBox img {
     width: 138px;
     height: 119px;
-    margin: 36px;
+    margin-right: 20px;
 }
 
 .text {
@@ -172,7 +188,6 @@ a {
     justify-content: center; 
     align-items: flex-start;
     height: 100%; 
-    margin-left: 30px;
 }
 
 .dino-quiz {
