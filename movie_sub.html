@@ -12,50 +12,16 @@
 </head>
 
 <body style="overflow-x:scroll; overflow-y:scroll;">
-    <header id="header">
-        <div class="mainHeader">
-            <h1 class="logo">
-                <a href="home.html" target="_blank">
-                    <img src="assets\images\header\logo.png" alt="쥬니버네이버">
-                </a>
-            </h1>
-            <div class="search-box">
-                <input type="text" placeholder="검색어를 입력하세요">
-                <img src="assets\images\header\searchIcon.png">
-            </div>
-            <div class="btnGrp">
-                <div class="login">
-                    <a href="login.html" target="_blank"><button>로그인</button></a>
-                </div>
-                <div class="logout" style="display: none;">
-                    <button id="logout">로그아웃</button>
-                </div>
-                <div class="naver-logo">
-                    <a href="https://www.naver.com" target="_blank"><button class="naver-button">N</button></a>
-                </div>
-            </div>
-        </div>
-        <nav>
-            <div class="icons">
-                <div class="icon">
-                    <a href="home.html"><img src="assets\images\header\character.jpeg" alt="캐릭터"></a>
-                    <p>캐릭터</p>
-                </div>
-                <div class="icon">
-                    <a href="movie.html"><img src="assets\images\header\movie.jpeg" alt="영상"></a>
-                    <p>영상</p>
-                </div>
-                <div class="icon">
-                    <a href="touch.html"><img src="assets\images\header\game.jpeg" alt="게임"></a>
-                    <p>게임</p>
-                </div>
-                <div class="icon">
-                    <a href="bookmark.html"><img src="assets\images\header\bookmark.jpeg" alt="즐겨찾기"></a>
-                    <p>즐겨찾기</p>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
+    <script>
+        async function loadHeader() {
+            const headerPlaceholder = document.getElementById('header-placeholder');
+            const response = await fetch('header.html');
+            const headerHTML = await response.text();
+            headerPlaceholder.innerHTML = headerHTML;
+        }
+        loadHeader();
+    </script>
     <main class="movieListSub">
         <div class="bigMovie">
             <video id="movie-video" src="assets/video/과일빙수송.mp4" alt="Movie Video" controls="true" controlslist="nodownload"></video>
