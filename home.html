@@ -8,42 +8,10 @@
     <link rel="icon" href="assets\images\header\favicon.ico">
     <title>쥬니어 네이버</title>
 </head>
-
 <body>
     <div id="header-placeholder"></div>
-    <script>
-      document.addEventListener("DOMContentLoaded", async function() {
-    await loadHeader();
-    checkLoginStatus(); // 로그인 상태 확인 후 로그인/로그아웃 표시
-  });
-
-  async function loadHeader() {
-    const headerPlaceholder = document.getElementById('header-placeholder');
-    try {
-      const response = await fetch('header.html');
-      const headerHTML = await response.text();
-      headerPlaceholder.innerHTML = headerHTML;
-    } catch (error) {
-      console.error('헤더 로드 오류:', error);
-    }
-  }
-
-  function checkLoginStatus() {
-    const isLoggedIn = localStorage.getItem("loggedIn") === "true"; // 로그인 상태 확인
-    const login = document.querySelector(".login");
-    const logout = document.querySelector(".logout");
-
-    if (login && logout) {
-      if (isLoggedIn) {
-        login.style.display = "none";
-        logout.style.display = "block";
-      } else {
-        login.style.display = "block";
-        logout.style.display = "none";
-      }
-    }
-  }
-    </script>
+    <script src="assets/js/main.js" type="module"></script>
+    <script src="assets/js/login.js" type="module"></script>
     <main class="contents">
         <div class="card">
             <div class="cardUp">
@@ -178,8 +146,6 @@
             <a class="quick_menu7">제휴제안ㅣ</a>
         </div>
     </footer>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/login.js" type="module"></script>
 </body>
 
 </html>

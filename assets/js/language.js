@@ -4,7 +4,7 @@ let likeLanguageList = JSON.parse(localStorage.getItem("likeLanguageList")) || [
 const languageBoxList = document.querySelector(".languageBoxList");
 const languageBox = document.querySelector(".languageBox");
 
-window.onload = function () {  
+window.addEventListener('load', function() {
   checkLoginStatus();
   logintoggle();
   renderLanguageBoxList();
@@ -60,7 +60,7 @@ window.onload = function () {
   });
 
   restoreLanguageLikedStatus();
-};
+});
 
 function renderLanguageBoxList() {
   fetch("assets/data/language.json")

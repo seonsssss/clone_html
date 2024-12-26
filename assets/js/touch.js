@@ -3,7 +3,7 @@ let isGameAlreadyLiked;
 let likeGameList = JSON.parse(localStorage.getItem("likeGameList")) || [];
 const gameBoxList = document.querySelector(".gameBoxList");
 const gameBox = document.querySelector(".gameBox");
-window.onload = function () {  
+window.addEventListener('load', function() {
   checkLoginStatus();
   logintoggle();
   renderGameBoxList();
@@ -58,7 +58,7 @@ window.onload = function () {
     }
   });
   restoreGameLikedStatus();
-};
+});
 
 function renderGameBoxList() {
   fetch("assets/data/touch.json")

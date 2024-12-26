@@ -9,13 +9,13 @@ const likeGameDiv = document.querySelector(".likeGameDiv");
 const likeGamed = JSON.parse(localStorage.getItem("likeGameList")) || [];
 const likeLanguage = JSON.parse(localStorage.getItem("likeLanguageList")) || [];
 
-window.onload = function () {
+window.addEventListener('load', function() {
   updateBookmarkVisibility();
   populateLikeDiv()
   checkLoginStatus();
   logintoggle();
   console.log("loggedIn:" + localStorage.getItem("loggedIn"));
-};
+});
 
 function updateBookmarkVisibility() {
   const isLoggedIn = localStorage.getItem("loggedIn");

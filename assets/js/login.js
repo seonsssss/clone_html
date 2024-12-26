@@ -2,62 +2,60 @@ const login = document.querySelector(".login");
 const logout = document.querySelector(".logout");
 let isLoggedIn = localStorage.getItem("loggedIn");
 
-window.onload = function () {  
-  console.log("Window loaded");
-  checkLoginStatus();
-  logintoggle();
+document.addEventListener("DOMContentLoaded", () => {
+  async function loadHeader() {
+      const headerPlaceholder = document.getElementById('header-placeholder');
+      try {
+          const response = await fetch('header.html');
+          const headerHTML = await response.text();
+          headerPlaceholder.innerHTML = headerHTML;
+          checkLoginStatus();
+          logintoggle();
+      } catch (error) {
+          console.error('헤더 로드 오류:', error);
+      }
+  }
+
+  loadHeader();
   checkLoginForm();
   changeInput();
-  console.log("loggedIn:", localStorage.getItem("loggedIn"));
-};
-
-
-window.addEventListener('storage', function(e) {
-  if (e.key === 'loggedIn') {
-    checkLoginStatus();
-  }
 });
 
-async function loadHeader() {
-  const headerPlaceholder = document.getElementById('header-placeholder');
-  try {
-    const response = await fetch('header.html');
-    const headerHTML = await response.text();
-    headerPlaceholder.innerHTML = headerHTML;
-  } catch (error) {
-    console.error('헤더 로드 오류:', error);
+function checkLoginStatus() {
+  const login = document.querySelector(".login");
+  const logout = document.querySelector(".logout");
+
+  if (!login || !logout) {
+    console.error("로그인/로그아웃 버튼을 찾을 수 없습니다.");
+    return;
   }
+
+  const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+  if (isLoggedIn === null) {
+    console.warn("loggedIn 상태가 설정되지 않았습니다.");
+  }
+
+  toggleLoginLogout(isLoggedIn, login, logout);
 }
 
-function checkLoginStatus() {
-  isLoggedIn = localStorage.getItem("loggedIn");
-
-  if (login) {
-    if (isLoggedIn) {
-      login.style.display = "none";
-    } else {
-      login.style.display = "block";
-    }
-  }
-
-  // logout이 존재하는지 확인하고 스타일을 설정
-  if (logout) {
-    if (isLoggedIn) {
-      logout.style.display = "block";
-    } else {
-      logout.style.display = "none";
-    }
+function toggleLoginLogout(isLoggedIn, login, logout) {
+  if (isLoggedIn) {
+    login.style.display = "none";
+    logout.style.display = "block";
+  } else {
+    login.style.display = "block";
+    logout.style.display = "none";
   }
 }
 
 
 function checkLoginForm() {
   const loginForm = document.getElementById("loginForm");
-
   if (loginForm) {
     loginForm.addEventListener("submit", function (event) {
       event.preventDefault();
-
+      const currentPage = window.location.href;
       const userId = document.getElementById("userId").value;
       const userPassword = document.getElementById("userPassword").value;
 
@@ -67,25 +65,32 @@ function checkLoginForm() {
       if (userId === validUserId && userPassword === validUserPassword) {
         localStorage.setItem("loggedIn", "true");
         checkLoginStatus(); 
-        window.location.href = "home.html";
+        window.location.href = currentPage;
+        console.log("currentPage:"+ currentPage);
+        logout.style.display = "none";
+        login.style.display = "block";
       } else {
         alert("로그인 실패: 아이디 또는 비밀번호가 잘못되었습니다.");
+        console.log("currentPage:"+ currentPage);
       }
     });
   }
 }
 
+
 function logintoggle() {
+  const login = document.querySelector(".login");
+  const logout = document.querySelector(".logout");
+
   if (login && logout) {
     login.addEventListener("click", function () {
+      localStorage.setItem("loggedIn", "true");
       checkLoginStatus();
     });
 
     logout.addEventListener("click", function () {
       localStorage.setItem("loggedIn", "false");
       checkLoginStatus();
-      logout.style.display = "none";
-      login.style.display = "block";
     });
   }
 }
@@ -110,4 +115,4 @@ document.querySelectorAll(".input-group input").forEach((input) => {
   });
 });
 }
-export { isLoggedIn, checkLoginStatus, logintoggle, loadHeader };
+export { isLoggedIn, checkLoginStatus, logintoggle};

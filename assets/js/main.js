@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('load', function() {
   const cards = document.querySelectorAll(".card-item");
   const modalCards = document.querySelectorAll(".modal-card");
   const modal = document.querySelector(".modal");

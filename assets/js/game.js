@@ -1,5 +1,5 @@
 import { isLoggedIn, checkLoginStatus, logintoggle } from "./login.js";
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('load', function() {
   checkLoginStatus();
   logintoggle();
   const love = document.querySelectorAll(".love");

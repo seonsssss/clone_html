@@ -41,14 +41,6 @@
             </div>
         </div>
     </nav>
+    <script src="assets/js/login.js" type="module"></script>
 </header>
-<script>
-    // 로그아웃 버튼 클릭 시 처리
-    const logoutButton = document.querySelector("#logout");
-    if (logoutButton) {
-      logoutButton.addEventListener("click", function () {
-        localStorage.setItem("loggedIn", "false");
-        checkLoginStatus(); // 로그인 상태 확인 후 표시 갱신
-      });
-    }
-  </script>
+

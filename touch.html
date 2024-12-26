@@ -13,12 +13,18 @@
 
 <body style="overflow-x:scroll; overflow-y:scroll;">
     <div id="header-placeholder"></div>
+    <script src="assets/js/touch.js" type="module"></script>
+    <script src="assets/js/login.js" type="module"></script>
     <script>
         async function loadHeader() {
             const headerPlaceholder = document.getElementById('header-placeholder');
-            const response = await fetch('header.html');
-            const headerHTML = await response.text();
-            headerPlaceholder.innerHTML = headerHTML;
+            try {
+                const response = await fetch('header.html');
+                const headerHTML = await response.text();
+                headerPlaceholder.innerHTML = headerHTML;
+            } catch (error) {
+                console.error('헤더 로드 오류:', error);
+            }
         }
         loadHeader();
     </script>
@@ -28,15 +34,15 @@
                 <p>플레이존</p>
             </div>
             <div class="listBox" style="background-color: #ffc82a; border: 2px solid #ffc82a;">
-                <a href="touch.html" target="_blank">
+                <a href="touch.html">
                     <p style="color: white">터치팡팡</p></a>
             </div>
             <div class="listBox"></a>
-                <a href="language.html" target="_blank">
+                <a href="language.html">
                     <p>언어놀이</p></a>
             </div>
             <div class="listBox">
-                <a href="quiz.html" target="_blank">
+                <a href="quiz.html">
                     <p>퀴즈왕</p></a>
             </div>
         </div>
@@ -46,7 +52,5 @@
         </div>
         </div>
     </main>
-    <script src="assets/js/login.js" type="module"></script>
-    <script src="assets/js/touch.js" type="module"></script>
 </body>
 </html>
