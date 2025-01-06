@@ -1,22 +1,24 @@
-const login = document.querySelector(".login");
-const logout = document.querySelector(".logout");
 let isLoggedIn = localStorage.getItem("loggedIn");
-
 document.addEventListener("DOMContentLoaded", () => {
-  async function loadHeader() {
-      const headerPlaceholder = document.getElementById('header-placeholder');
+  const headerPlaceholder = document.getElementById('header-placeholder');
+
+  if (headerPlaceholder) {
+    async function loadHeader() {
       try {
-          const response = await fetch('header.html');
-          const headerHTML = await response.text();
-          headerPlaceholder.innerHTML = headerHTML;
-          checkLoginStatus();
-          logintoggle();
+        const response = await fetch('header.html');
+        const headerHTML = await response.text();
+        headerPlaceholder.innerHTML = headerHTML;
+        logintoggle();
+        checkLoginStatus();
       } catch (error) {
-          console.error('헤더 로드 오류:', error);
+        console.error('헤더 로드 오류:', error);
       }
+    }
+    loadHeader();
+  } else {
+    console.log("loginpage");
   }
 
-  loadHeader();
   checkLoginForm();
   changeInput();
 });
@@ -55,7 +57,6 @@ function checkLoginForm() {
   if (loginForm) {
     loginForm.addEventListener("submit", function (event) {
       event.preventDefault();
-      const currentPage = window.location.href;
       const userId = document.getElementById("userId").value;
       const userPassword = document.getElementById("userPassword").value;
 
@@ -65,13 +66,9 @@ function checkLoginForm() {
       if (userId === validUserId && userPassword === validUserPassword) {
         localStorage.setItem("loggedIn", "true");
         checkLoginStatus(); 
-        window.location.href = currentPage;
-        console.log("currentPage:"+ currentPage);
-        logout.style.display = "none";
-        login.style.display = "block";
+          window.location.href = "home.html";
       } else {
         alert("로그인 실패: 아이디 또는 비밀번호가 잘못되었습니다.");
-        console.log("currentPage:"+ currentPage);
       }
     });
   }
@@ -84,11 +81,11 @@ function logintoggle() {
 
   if (login && logout) {
     login.addEventListener("click", function () {
-      localStorage.setItem("loggedIn", "true");
       checkLoginStatus();
     });
 
     logout.addEventListener("click", function () {
+      location.reload(true);
       localStorage.setItem("loggedIn", "false");
       checkLoginStatus();
     });

@@ -13,24 +13,11 @@
 
 <body style="overflow-x:scroll; overflow-y:scroll;">
     <div id="header-placeholder"></div>
-    <script>
-        async function loadHeader() {
-            const headerPlaceholder = document.getElementById('header-placeholder');
-            try {
-                const response = await fetch('header.html');
-                const headerHTML = await response.text();
-                headerPlaceholder.innerHTML = headerHTML;
-            } catch (error) {
-                console.error('헤더 로드 오류:', error);
-            }
-        }
-        loadHeader();
-    </script>
         <script src="assets/js/login.js" type="module"></script>
         <script src="assets/js/movie.js" type="module"></script>
     <main class="movieListSub">
         <div class="bigMovie">
-            <video id="movie-video" src="assets/video/과일빙수송.mp4" alt="Movie Video" controls="true" controlslist="nodownload"></video>
+            <video id="movie-video" controls controlslist="nodownload"></video>
             <div class="movietxtSub">
                 <p id="movietxtSub">★과일빙수송★ | 무더운 여름엔 시원한 과일 빙수</p>
             </div>

@@ -4,10 +4,10 @@ import { checkLoginStatus, logintoggle } from "./login.js";
 const movieList = document.getElementById("movieList");
 let likeMovieList = JSON.parse(localStorage.getItem("likeMovieList")) || [];
 
-window.addEventListener('load', function() {
+document.addEventListener("DOMContentLoaded", async() => {
   checkLoginStatus();
   logintoggle();
-  loadMovies(); 
+  await loadMovies(); 
   restoreLikedStatus(); 
   setupHeartClickEvent(); 
 });
