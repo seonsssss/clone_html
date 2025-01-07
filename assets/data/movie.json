@@ -7,6 +7,7 @@
         "altText": "과일빙수송",
         "time": "12:00",
         "link": "movie_sub.html?movieId=1",
+        "videoPath": "assets/video/과일빙수송.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -19,6 +20,7 @@
         "altText": "신나는 캠프",
         "time": "12:00",
         "link": "movie_sub.html?movieId=2",
+        "videoPath": "assets/video/신나는 캠프.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -31,6 +33,7 @@
         "altText": "아기상어 숫자 놀이",
         "time": "12:00",
         "link": "movie_sub.html?movieId=3",
+        "videoPath": "assets/video/아기상어 숫자놀이.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -43,6 +46,7 @@
         "altText": "응가송",
         "time": "12:00",
         "link": "movie_sub.html?movieId=4",
+        "videoPath": "assets/video/응가송.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -55,6 +59,7 @@
         "altText": "정글브라운 15화",
         "time": "12:00",
         "link": "movie_sub.html?movieId=5",
+        "videoPath": "assets/video/정글브라운 15화.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -67,6 +72,7 @@
         "altText": "코리리동요",
         "time": "12:00",
         "link": "movie_sub.html?movieId=6",
+        "videoPath": "assets/video/코리리동요.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -79,6 +85,7 @@
         "altText": "트니프렌즈! 베니의 생활습관",
         "time": "12:00",
         "link": "movie_sub.html?movieId=7",
+        "videoPath": "assets/video/트니프렌즈! 베니의 생활습관.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -91,6 +98,7 @@
         "altText": "페티의 여름",
         "time": "12:00",
         "link": "movie_sub.html?movieId=8",
+        "videoPath": "assets/video/페티의 여름.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -103,6 +111,7 @@
         "altText": "도리도리송(감자도리송)",
         "time": "12:00",
         "link": "movie_sub.html?movieId=9",
+        "videoPath": "assets/video/도리도리 감자도리.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -115,6 +124,7 @@
         "altText": "나는 작은 주전자",
         "time": "12:00",
         "link": "movie_sub.html?movieId=10",
+        "videoPath": "assets/video/나의 작은 주전자.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -127,6 +137,7 @@
         "altText": "프랑키의 다이빙",
         "time": "12:00",
         "link": "movie_sub.html?movieId=11",
+        "videoPath": "assets/video/프랑키의 다이빙.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"
@@ -139,6 +150,7 @@
         "altText": "아기상어 자동차와 뽀득뽀득 세차해요",
         "time": "12:00",
         "link": "movie_sub.html?movieId=12",
+        "videoPath": "assets/video/뽀득뽀득 세차해요.mp4",
         "heart": {
           "emptySrc": "assets/images/movie/빈하트.png",
           "fullSrc": "assets/images/movie/하트.png"

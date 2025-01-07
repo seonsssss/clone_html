@@ -4,13 +4,14 @@ import { checkLoginStatus, logintoggle } from "./login.js";
 const movieList = document.getElementById("movieList");
 let likeMovieList = JSON.parse(localStorage.getItem("likeMovieList")) || [];
 
-document.addEventListener("DOMContentLoaded", async() => {
+document.addEventListener("DOMContentLoaded", async () => {
   checkLoginStatus();
   logintoggle();
-  await loadMovies(); 
-  restoreLikedStatus(); 
-  setupHeartClickEvent(); 
+  await loadMovies();
+  restoreLikedStatus();
+  setupHeartClickEvent();
 });
+
 async function loadMovies() {
   try {
     const response = await fetch("assets/data/movie.json");
@@ -35,7 +36,6 @@ function setupHeartClickEvent() {
         image: movieItem.querySelector(".movie-img").src,
         isLiked: true,
       };
-
       if (isLoggedIn) {
         if (heart.classList.contains("heart-empty")) {
           heart.src = "assets/images/movie/하트.png";
@@ -78,7 +78,7 @@ function restoreLikedStatus() {
 }
 
 function renderMovieList(movies) {
-  movieList.innerHTML = ""; 
+  movieList.innerHTML = "";
   movies.forEach((movie) => {
     const movieItem = `
       <div class="movie-item" id="${movie.id}">
