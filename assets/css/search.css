@@ -1,0 +1,18 @@
+.search-results {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-results h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}

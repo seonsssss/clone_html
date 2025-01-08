@@ -1,10 +1,10 @@
+import { initializeSearch } from "./search.js";
 window.addEventListener('load', function() {
   const cards = document.querySelectorAll(".card-item");
   const modalCards = document.querySelectorAll(".modal-card");
   const modal = document.querySelector(".modal");
   const closeButtons = document.querySelectorAll(".close");
   // const listBox = document.querySelectorAll(".listBox");
-
   cards.forEach((card, index) => {
     card.addEventListener("click", function () {
       modal.style.display = "flex"; // 모달 배경 표시
@@ -18,6 +18,7 @@ window.addEventListener('load', function() {
   closeButtons.forEach((button) => {
     button.addEventListener("click", function () {
       modal.style.display = "none"; // 모달 배경 숨기기
+      initializeSearch();
     });
   });
 
