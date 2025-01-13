@@ -1,5 +1,6 @@
 import { checkLoginStatus, logintoggle } from "./login.js";
 import { movies } from "./movies.js";
+import { initializeSearch } from "./search.js";
 
 const bookmarkBefore = document.querySelector(".bookmarkBefore");
 const bookmarkAfter = document.querySelector(".bookmarkAfter");
@@ -14,6 +15,7 @@ window.addEventListener('load', function() {
   populateLikeDiv()
   checkLoginStatus();
   logintoggle();
+  initializeSearch();
   console.log("loggedIn:" + localStorage.getItem("loggedIn"));
 });
 

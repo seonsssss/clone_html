@@ -1,5 +1,3 @@
-
-// 검색 기능 초기화
 async function initializeSearch() {
     const searchInput = document.querySelector(".search-box input");
     const searchResultsContainer = document.querySelector(".search-results");
@@ -9,31 +7,78 @@ async function initializeSearch() {
         return;
     }
 
-    const movieData = await fetch("assets/data/movie.json")
+    const movieData = await fetch("/assets/data/movie.json")
         .then(res => res.json())
-        .then(data => data.movies)
+        .then(data => data.movies || [])
         .catch(error => {
             console.error("Error loading movie.json:", error);
             return [];
         });
+
+    const languageData = await fetch("/assets/data/language.json")
+        .then(res => res.json())
+        .then(data => data.languages || [])
+        .catch(error => {
+            console.error("Error loading language.json:", error);
+            return [];
+        });
+
+
+    const touchData = await fetch("/assets/data/touch.json")
+        .then(res => res.json())
+        .then(data => data.touch || [])
+        .catch(error => {
+            console.error("Error loading touch.json:", error);
+            return [];
+        });
+
+    const allData = [
+        ...movieData.map(item => ({
+            title: item.title,
+            imageSrc: item.imageSrc,
+            altText: item.altText,
+            link: item.link,
+            category: 'movie'
+        })),
+        ...languageData.map(item => ({
+            title: item.title,
+            imageSrc: item.imageSrc || 'default-image.jpg',
+            altText: item.altText || item.title,
+            link: item.link || '#',
+            category: 'language'
+        })),
+        ...touchData.map(item => ({
+            title: item.title,
+            imageSrc: item.imageSrc || 'default-image.jpg',
+            altText: item.altText || item.title,
+            link: item.link || '#',
+            category: 'touch'
+        }))
+    ];
 
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
         searchResultsContainer.innerHTML = "";
 
         if (query) {
-            const results = movieData.filter(item =>
-                item.title.toLowerCase().includes(query)
+            const results = allData.filter(item =>
+                item.title && item.title.toLowerCase().includes(query)
             );
 
             results.forEach(result => {
                 const resultDiv = document.createElement("div");
                 resultDiv.classList.add("search-result");
                 resultDiv.innerHTML = `
-                    <h3>${result.title}</h3>
-                    <img src="${result.imageSrc}" alt="${result.altText}" />
-                    <p>Time: ${result.time}</p>
-                    <a href="${result.link}">View Details</a>
+<div class="search-result">
+    <a href="${result.link}" class="result-link">
+        <div class="result-thumbnail">
+            <img src="${result.imageSrc}" alt="${result.altText}" />
+        </div>
+        <div class="result-info">
+            <h3 class="result-title">${result.title}</h3>
+        </div>
+    </a>
+</div>
                 `;
                 searchResultsContainer.appendChild(resultDiv);
             });
@@ -45,4 +90,4 @@ async function initializeSearch() {
     });
 }
 
-export {initializeSearch};
+export { initializeSearch };

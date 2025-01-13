@@ -1,4 +1,5 @@
 import { isLoggedIn, checkLoginStatus, logintoggle } from "./login.js";
+import { initializeSearch } from "./search.js";
 let isLanguageAlreadyLiked;
 let likeLanguageList = JSON.parse(localStorage.getItem("likeLanguageList")) || [];
 const languageBoxList = document.querySelector(".languageBoxList");
@@ -8,6 +9,7 @@ window.addEventListener('load', function() {
   checkLoginStatus();
   logintoggle();
   renderLanguageBoxList();
+  initializeSearch();
 
   languageBox.addEventListener("click", function (event) {
     if (event.target && event.target.closest(".love img")) {

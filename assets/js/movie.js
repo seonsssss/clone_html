@@ -1,12 +1,7 @@
-import { checkLoginStatus, logintoggle } from "./login.js";
-// import { movies } from "./movies.js";
-
 const movieList = document.getElementById("movieList");
 let likeMovieList = JSON.parse(localStorage.getItem("likeMovieList")) || [];
 
 document.addEventListener("DOMContentLoaded", async () => {
-  checkLoginStatus();
-  logintoggle();
   await loadMovies();
   restoreLikedStatus();
   setupHeartClickEvent();

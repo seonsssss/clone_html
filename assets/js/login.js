@@ -1,7 +1,7 @@
 let isLoggedIn = localStorage.getItem("loggedIn");
+import { initializeSearch } from "./search.js";
 document.addEventListener("DOMContentLoaded", () => {
   const headerPlaceholder = document.getElementById('header-placeholder');
-
   if (headerPlaceholder) {
     async function loadHeader() {
       try {
@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         headerPlaceholder.innerHTML = headerHTML;
         logintoggle();
         checkLoginStatus();
+        initializeSearch();
       } catch (error) {
         console.error('헤더 로드 오류:', error);
       }
