@@ -1,6 +1,4 @@
-import { checkLoginStatus, logintoggle } from "./login.js";
 import { movies } from "./movies.js";
-import { initializeSearch } from "./search.js";
 
 const bookmarkBefore = document.querySelector(".bookmarkBefore");
 const bookmarkAfter = document.querySelector(".bookmarkAfter");
@@ -13,9 +11,6 @@ const likeLanguage = JSON.parse(localStorage.getItem("likeLanguageList")) || [];
 window.addEventListener('load', function() {
   updateBookmarkVisibility();
   populateLikeDiv()
-  checkLoginStatus();
-  logintoggle();
-  initializeSearch();
   console.log("loggedIn:" + localStorage.getItem("loggedIn"));
 });
 
@@ -127,11 +122,3 @@ function populateLikeDiv() {
     });
   });
 };
-
-function resetLikeMovies() {
-  localStorage.removeItem("likeMovieList");
-}
-
-function resetLikeGames() {
-  localStorage.removeItem("likeGameList"); 
-}

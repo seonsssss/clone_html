@@ -1,7 +1,10 @@
 async function initializeSearch() {
     const searchInput = document.querySelector(".search-box input");
     const searchResultsContainer = document.querySelector(".search-results");
-
+    const searchBtn = document.querySelector("#searchButton");
+    let query;
+    let searchValue;
+    
     if (!searchInput || !searchResultsContainer) {
         console.error("Search elements not found!");
         return;
@@ -22,7 +25,6 @@ async function initializeSearch() {
             console.error("Error loading language.json:", error);
             return [];
         });
-
 
     const touchData = await fetch("/assets/data/touch.json")
         .then(res => res.json())
@@ -57,36 +59,44 @@ async function initializeSearch() {
     ];
 
     searchInput.addEventListener("input", () => {
-        const query = searchInput.value.trim().toLowerCase();
+        query = searchInput.value.trim().toLowerCase();
         searchResultsContainer.innerHTML = "";
-
         if (query) {
+            searchValue = true;
             const results = allData.filter(item =>
                 item.title && item.title.toLowerCase().includes(query)
             );
-
             results.forEach(result => {
                 const resultDiv = document.createElement("div");
                 resultDiv.classList.add("search-result");
                 resultDiv.innerHTML = `
-<div class="search-result">
-    <a href="${result.link}" class="result-link">
-        <div class="result-thumbnail">
-            <img src="${result.imageSrc}" alt="${result.altText}" />
-        </div>
-        <div class="result-info">
-            <h3 class="result-title">${result.title}</h3>
-        </div>
-    </a>
-</div>
+                    <div class="search-result">
+                        <a href="${result.link}" class="result-link">
+                            <div class="result-thumbnail">
+                                <img src="${result.imageSrc}" alt="${result.altText}" />
+                            </div>
+                            <div class="result-info">
+                                <h3 class="result-title">${result.title}</h3>
+                            </div>
+                        </a>
+                    </div>
                 `;
                 searchResultsContainer.appendChild(resultDiv);
             });
 
             if (results.length === 0) {
-                searchResultsContainer.innerHTML = `<p>No results found</p>`;
+                searchValue = false;
+                searchResultsContainer.innerHTML = `<p>${query} 검색 결과 0건</p>`;
             }
+
+            // Save the query and results to localStorage
+            localStorage.setItem("searchQuery", query);
+            localStorage.setItem("searchResults", JSON.stringify(results));
         }
+    });
+
+    searchBtn.addEventListener("click", () => {
+        window.location.href = 'search.html';
     });
 }
 
