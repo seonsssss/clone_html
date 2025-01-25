@@ -93,19 +93,16 @@ h1 {
   background-color: #f9f9f9;
 }
 
-.search-box button {
-  position: absolute;
+ .searchClick {
+  position: relative;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
   border: none;
   background: none;
-  padding: 5px;
 }
 
-.search-button img {
-  width: 24px;
-  height: 24px;
+ .searchClick img {
+  width: 40px;
+  height: 40px;
 }
 
 .icons {
@@ -116,7 +113,7 @@ h1 {
   padding: 10px;
 }
 
-button {
+.searchClick {
   cursor: pointer;
 }
 

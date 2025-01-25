@@ -1,7 +1,7 @@
 async function initializeSearch() {
     const searchInput = document.querySelector(".search-box input");
     const searchResultsContainer = document.querySelector(".search-results");
-    const searchBtn = document.querySelector("#searchButton");
+    const searchBtn = document.querySelector(".searchClick");
     let query;
     let searchValue;
     
