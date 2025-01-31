@@ -2,6 +2,9 @@
   font-family: "Hanna Pro";
   src: url('../fonts/BMHANNAPro.ttf') format('truetype');
 }
+img {
+  -webkit-user-drag: none;
+}
 
 /* 헤더 영역 */
 body {
@@ -163,20 +166,15 @@ h1 {
   color: rgb(3, 199, 90);
   border: 2px solid #4CAF50;
   transition: width 0.3s;
-  /* 애니메이션 효과 추가 */
   text-align: center;
-  /* 텍스트 가운데 정렬 */
   position: absolute;
 }
 
 .naver-button:hover {
   width: 100px;
-  /* 가로 길이 확장 */
   color: rgb(3, 199, 90);
-  /* 텍스트 색상 유지 */
 }
 
-/* 텍스트 변경을 위한 추가 요소 */
 .naver-button::after {
   content: 'aver';
   display: inline-block;
@@ -424,5 +422,4 @@ footer {
 
 footer a {
   font-family: 'NanumSquareRound';
-
 }

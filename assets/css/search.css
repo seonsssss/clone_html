@@ -1,31 +1,48 @@
 .search-results {
-    display: flex;
+    display: none;
+    position: absolute;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* 자동 줄바꿈 */
+    gap: 10px;
+    top: 60px;
+    left: 100px;
+    right: 100px;
+    min-height: 200px; 
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #35ae30;
+    z-index: 605;
+    content: '';
 }
 
-.search-result {
+.search-result, .search-resultVideo{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    position:relative;
+    position: relative;
     margin : 5px;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     transition-duration: 0.5s;
+    background-color: white;
 }
 
-.search{
+.searchList {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap; 
 }
 
-.search-result:hover {
+.search-result:hover, .search-resultVideo:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
 }
 
+.result-info {
+    background-color: white;
+}
 .result-link {
     text-decoration: none;
 }
@@ -57,5 +74,19 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
 
+.searchResults {
+    margin-top: 22px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    letter-spacing: -0.7px;
+    font-family: 'NanumSquareRound';
+}
+
+mark {
+    color: #0400ff;
+    background-color:transparent;
 }

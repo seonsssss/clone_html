@@ -4,7 +4,7 @@ async function initializeSearch() {
     const searchBtn = document.querySelector(".searchClick");
     let query;
     let searchValue;
-    
+
     if (!searchInput || !searchResultsContainer) {
         console.error("Search elements not found!");
         return;
@@ -59,6 +59,7 @@ async function initializeSearch() {
     ];
 
     searchInput.addEventListener("input", () => {
+        searchResultsContainer.style.display = 'flex';
         query = searchInput.value.trim().toLowerCase();
         searchResultsContainer.innerHTML = "";
         if (query) {
@@ -92,11 +93,19 @@ async function initializeSearch() {
             // Save the query and results to localStorage
             localStorage.setItem("searchQuery", query);
             localStorage.setItem("searchResults", JSON.stringify(results));
+        } else {
+            searchResultsContainer.style.display = "none";
         }
     });
 
     searchBtn.addEventListener("click", () => {
         window.location.href = 'search.html';
+    });
+
+    searchInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            window.location.href = 'search.html';
+        }
     });
 }
 
