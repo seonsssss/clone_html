@@ -12,10 +12,40 @@ async function loadMovies() {
     const response = await fetch("assets/data/movie.json");
     const data = await response.json();
     const movies = data.movies;
+    await updateMovieTimes(movies);
     renderMovieList(movies);
   } catch (error) {
     console.error("Error loading movies:", error);
   }
+}
+
+function updateMovieTimes(movies) {
+  return Promise.all(
+    movies.map((movie) => {
+      return new Promise((resolve) => {
+        const video = document.createElement("video");
+        video.src = movie.videoPath;
+        video.preload = "metadata";
+
+        video.onloadedmetadata = function () {
+          movie.time = formatTime(video.duration);
+          resolve();
+        };
+
+        video.onerror = function () {
+          console.error(`Error loading video: ${movie.videoPath}`);
+          movie.time = "00:00";
+          resolve();
+        };
+      });
+    })
+  );
+}
+
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
 }
 
 function setupHeartClickEvent() {
@@ -29,6 +59,7 @@ function setupHeartClickEvent() {
         movieId: movieId,
         title: movieItem.querySelector(".text p").textContent,
         image: movieItem.querySelector(".movie-img").src,
+        time: movieItem.querySelector(".movie-time").textContent,
         isLiked: true,
       };
       if (isLoggedIn) {
@@ -96,3 +127,5 @@ function renderMovieList(movies) {
     movieList.innerHTML += movieItem;
   });
 }
+
+export { updateMovieTimes, formatTime};

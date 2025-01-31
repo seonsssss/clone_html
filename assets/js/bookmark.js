@@ -31,7 +31,6 @@ function populateLikeDiv() {
     ...likeGamed.map((game) => ({ ...game, type: 'game' })),
     ...likeLanguage.map((language) => ({ ...language, type: 'language' }))
   ];
-  console.log("likeLanguage:" + likeLanguage);
 
   combinedList.forEach((item) => {
     const itemDiv = document.createElement("div");
@@ -39,11 +38,12 @@ function populateLikeDiv() {
     itemDiv.id = `${item.type}${item.id || item.movieId || item.gameId}`;
 
     const itemLink = document.createElement("a");
-    let imageSrc, linkHref;
+    let imageSrc, linkHref, durationText = "";
 
     if (item.type === "movie") {
       imageSrc = movies[item.movieId].image;
       linkHref = `movie_sub.html?movieId=${item.movieId}`;
+      durationText = item.time ? `${item.time}` : ""; 
     } else if (item.type === "game") {
       imageSrc = item.image;
       linkHref = item.link;
@@ -60,6 +60,13 @@ function populateLikeDiv() {
 
     itemLink.appendChild(itemImg);
     itemDiv.appendChild(itemLink);
+
+    if (item.type === "movie" && durationText) {
+      const itemDuration = document.createElement("div");
+      itemDuration.classList.add("movie-time");
+      itemDuration.textContent = durationText;
+      itemDiv.appendChild(itemDuration);
+    }
 
     const textLoveDiv = document.createElement("div");
     textLoveDiv.classList.add("text-love");
@@ -106,16 +113,22 @@ function populateLikeDiv() {
     
       if (!item.isLiked) {
         let updatedList;
-        
+        console.log("item:"+itemDiv.id);
         if (item.type === "movie") {
           updatedList = likeMovied.filter(i => i.movieId !== item.movieId);
           localStorage.setItem("likeMovieList", JSON.stringify(updatedList));
+          likeMovied.length = 0;
+          likeMovied.push(...updatedList);
         } else if (item.type === "game") {
           updatedList = likeGamed.filter(i => i.gameId !== item.gameId);
           localStorage.setItem("likeGameList", JSON.stringify(updatedList));
+          likeGamed.length = 0;
+          likeGamed.push(...updatedList);
         } else if (item.type === "language") {
           updatedList = likeLanguage.filter(i => i.languageId !== item.languageId); 
           localStorage.setItem("likeLanguageList", JSON.stringify(updatedList));
+          likeLanguage.length = 0;
+          likeLanguage.push(...updatedList);
         }
         itemDiv.remove(); 
       }

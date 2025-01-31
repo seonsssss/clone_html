@@ -196,6 +196,21 @@
     align-items: center;
 }
 
+.movie-time {
+    position: relative;
+    bottom: 35px;
+    right: -180px;
+    width: 60px;
+    height: 20px;
+    background-color: #190909;
+    opacity: 0.5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
 .love {
     width: 36px;
     height: 36px;
