@@ -73,7 +73,9 @@ function setupHeartClickEvent() {
           heart.src = "assets/images/movie/빈하트.png";
           heart.classList.remove("heart-full");
           heart.classList.add("heart-empty");
-          likeMovieList = likeMovieList.filter((movie) => movie.movieId !== movieId);
+          likeMovieList = likeMovieList.filter(
+            (movie) => movie.movieId !== movieId
+          );
           localStorage.setItem("likeMovieList", JSON.stringify(likeMovieList));
         }
       } else {
@@ -87,7 +89,9 @@ function setupHeartClickEvent() {
 function restoreLikedStatus() {
   const isLoggedIn = localStorage.getItem("loggedIn") === "true";
   likeMovieList.forEach((likedMovie) => {
-    const likedMovieItem = document.getElementById(`movie${likedMovie.movieId}`);
+    const likedMovieItem = document.getElementById(
+      `movie${likedMovie.movieId}`
+    );
     if (likedMovieItem) {
       const heart = likedMovieItem.querySelector(".love img");
       if (isLoggedIn) {
@@ -115,7 +119,7 @@ function renderMovieList(movies) {
           <div class="movie-time">${movie.time}</div>
         </div>
         <div class="text-love">
-          <div class="text">å
+          <div class="text">
             <p>${movie.title}</p>
           </div>
           <div class="love">
