@@ -97,7 +97,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  top: 36px;
+  top: 16px;
 }
 
 .movie-itemSub img {
@@ -133,13 +133,13 @@
 
 .movie-timeSub {
   position: absolute;
-  bottom: 15px;
-  right: 16px;
+  bottom: 70px;
+  right: 20px;
   width: 60px;
   height: 20px;
   background-color: #190909;
+  color :white;
   opacity: 0.5;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,13 +148,19 @@
 
 .bigMovie {
   padding: 8px;
-  padding-right: 20px;
+  padding-right: 50px;
 }
 
 .bigMovie video {
   width: 700px;
   height: 400px;
   object-fit: fill;
+}
+
+#movieListRandom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px; 
 }
 
 #movietxtSub {
@@ -207,7 +213,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: right;
 }
 
 #loveIconSub,

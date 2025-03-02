@@ -115,7 +115,7 @@ function renderMovieList(movies) {
           <div class="movie-time">${movie.time}</div>
         </div>
         <div class="text-love">
-          <div class="text">
+          <div class="text">å
             <p>${movie.title}</p>
           </div>
           <div class="love">
@@ -128,4 +128,4 @@ function renderMovieList(movies) {
   });
 }
 
-export { updateMovieTimes, formatTime};
+export { updateMovieTimes, formatTime };

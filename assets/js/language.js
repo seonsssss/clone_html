@@ -1,11 +1,12 @@
 import { isLoggedIn, checkLoginStatus, logintoggle } from "./login.js";
 import { initializeSearch } from "./search.js";
 let isLanguageAlreadyLiked;
-let likeLanguageList = JSON.parse(localStorage.getItem("likeLanguageList")) || [];
+let likeLanguageList =
+  JSON.parse(localStorage.getItem("likeLanguageList")) || [];
 const languageBoxList = document.querySelector(".languageBoxList");
 const languageBox = document.querySelector(".languageBox");
 
-window.addEventListener('load', function() {
+window.addEventListener("load", function () {
   checkLoginStatus();
   logintoggle();
   renderLanguageBoxList();
@@ -26,7 +27,9 @@ window.addEventListener('load', function() {
         isLiked: true,
       };
 
-      isLanguageAlreadyLiked = likeLanguageList.some((lang) => lang.languageId === languageId);
+      isLanguageAlreadyLiked = likeLanguageList.some(
+        (lang) => lang.languageId === languageId
+      );
 
       console.log("isLoggedIn:", isLoggedIn);
       if (isLoggedIn === "true") {
@@ -37,7 +40,10 @@ window.addEventListener('load', function() {
 
           if (!isLanguageAlreadyLiked) {
             likeLanguageList.push(languageDetails);
-            localStorage.setItem("likeLanguageList", JSON.stringify(likeLanguageList));
+            localStorage.setItem(
+              "likeLanguageList",
+              JSON.stringify(likeLanguageList)
+            );
             console.log("languageDetails:", languageDetails);
             console.log("likeLanguageList:", likeLanguageList);
           } else {
@@ -48,8 +54,13 @@ window.addEventListener('load', function() {
           heart.classList.remove("heart-full");
           heart.classList.add("heart-empty");
 
-          likeLanguageList = likeLanguageList.filter((lang) => lang.languageId !== languageId);
-          localStorage.setItem("likeLanguageList", JSON.stringify(likeLanguageList));
+          likeLanguageList = likeLanguageList.filter(
+            (lang) => lang.languageId !== languageId
+          );
+          localStorage.setItem(
+            "likeLanguageList",
+            JSON.stringify(likeLanguageList)
+          );
           console.log("Language removed from likeLanguageList:", languageId);
         }
       } else {
@@ -76,7 +87,7 @@ function renderLanguageBoxList() {
         languageDiv.id = `language${language.id}`;
 
         const languageLink = document.createElement("a");
-        languageLink.href = language.link;
+        languageLink.href = language.link || "#";
 
         const languageImg = document.createElement("img");
         languageImg.classList.add("language-image");
@@ -112,15 +123,17 @@ function renderLanguageBoxList() {
         languageDiv.appendChild(textLoveDiv);
         languageBoxList.appendChild(languageDiv);
       });
-      
-      restoreLanguageLikedStatus(); 
+
+      restoreLanguageLikedStatus();
     })
     .catch((error) => console.error("Error fetching languages data:", error));
 }
 
 function restoreLanguageLikedStatus() {
   likeLanguageList.forEach((likedLanguage) => {
-    const likedLanguageItem = document.getElementById(`language${likedLanguage.languageId}`);
+    const likedLanguageItem = document.getElementById(
+      `language${likedLanguage.languageId}`
+    );
     if (likedLanguageItem) {
       const heart = likedLanguageItem.querySelector(".love img");
       if (heart) {
